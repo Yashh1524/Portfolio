@@ -1,10 +1,11 @@
 import { 
+  About,
   Hero,
   Navbar, 
 } from "./page";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Stars } from "./components";
+import { Button, Stars } from "./components";
 import { Suspense, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -46,51 +47,14 @@ function App() {
         <div className="relative max-w-7xl mx-auto">
           <Navbar />
           <Hero />
+          <div className="absolute bottom-7 left-0 right-0 w-full flex justify-center items-center">
+            <a href="#about" className="w-fit">
+              <Button name="Let's work together" isBeam containerClass="sm:w-fit sm:min-w-50 bg-[#2c2c2c] text-white rounded-md px-10" />
+            </a>
+          </div>
         </div>
       </div>
-        <div>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-          <h1>asjfh</h1>
-
-        </div>
+        <About />
     </main>
   );
 }

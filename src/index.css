@@ -18,6 +18,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.mask-clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .waving-hand {
   animation-name: wave-animation;
   animation-duration: 2.5s;
