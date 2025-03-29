@@ -1,9 +1,17 @@
 import { Robot } from "./Robot";
-import { Stars } from "./Stars"
 import Button from "./Button";
+import AboutSection from "./AboutSection";
+import StarsCanvas from "./canvas/StarsCanvas";
+import RobotCanvas from "./canvas/RobotCanvas";
+import Head from "./Head";
+import RocketCanvas from "./canvas/RocketCanvas";
 
 export {
     Robot,
-    Stars,
     Button,
+    AboutSection,
+    StarsCanvas,
+    RobotCanvas,
+    Head,
+    RocketCanvas,
 }
