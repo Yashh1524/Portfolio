@@ -3,7 +3,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { 
     AboutSection, 
-    RobotCanvas, 
     RocketCanvas
 } from "../components";
 
@@ -28,20 +27,16 @@ const About = () => {
             borderRadius: 0,
         });
 
-        clipAnimation.to(".custom-component", {
-            width: "100vw",
-            height: "100vh",
-        }, "<"); // Runs in sync with mask-clip-path
     });
 
     return (
-        <div id="about" className="min-h-screen w-full relative">
-            <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
+        <div id="about" className="min-h-screen w-full relative overflow-y-hidden">
+            <div className="relative mb-8 mt-20 flex flex-col items-center gap-5">
                 <p className="font-general text-sm uppercase md:text-[5rem] text-white">
-                    About
+                    Know Who I'M
                 </p>
 
-                <div className="absolute bottom-[-85dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem]">
+                <div className="absolute bottom-[-70dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem]">
                     <p className="text-gray-500 hidden lg:block">
                         Passionate full-stack developer skilled in MERN, Next.js, and problem-solving. Strong communicator, always seeking better solutions, and dedicated to writing clean, efficient code.
                     </p>
@@ -49,16 +44,13 @@ const About = () => {
             </div>
 
             <div className="h-dvh" id="clip">
-                <div className="mask-clip-path absolute left-1/2 top-0 z-10 h-[60vh] w-60 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[40vw] lg:w-[30vw]">
-                    <div className="mask-clip-path absolute left-0 top-0 size-full object-cover">
+                <div className="mask-clip-path absolute left-1/2 top-0 z-10 h-[60vh] lg:h-[45vh] w-60 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[40vw] lg:w-[30vw]">
+                    <div className="mask-clip-path absolute left-0 top-0 size-full">
                         <AboutSection />
                     </div>
                 </div>
-                <div className="ml-130 z-10 h-screen">
-                    <RocketCanvas />
-                </div>
+                <RocketCanvas />
             </div>
-
         </div>
     );
 };

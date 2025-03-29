@@ -5,6 +5,7 @@ import StarsCanvas from "./canvas/StarsCanvas";
 import RobotCanvas from "./canvas/RobotCanvas";
 import Head from "./Head";
 import RocketCanvas from "./canvas/RocketCanvas";
+import { AboutInfoForSmMD } from "./AboutInfoForSmMD";
 
 export {
     Robot,
@@ -14,4 +15,5 @@ export {
     RobotCanvas,
     Head,
     RocketCanvas,
+    AboutInfoForSmMD
 }

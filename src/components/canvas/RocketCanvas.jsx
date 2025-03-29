@@ -36,21 +36,26 @@ const RocketCanvas = () => {
     }, [isMoving]); // Depend on isMoving state
 
     return (
-        <div className="absolute w-full h-full flex justify-center items-center">
-            <Canvas>
-                <ambientLight />
-                <OrbitControls
-                    enableZoom={false}
-                    enablePan={false} // Disable manual panning
-                    maxPolarAngle={Math.PI / 2}
-                    minPolarAngle={Math.PI / 2}
-                />
-                <Suspense fallback={null}>
-                    <group position={position}>
-                        <Rocket scale={0.5} />
-                    </group>
-                </Suspense>
-            </Canvas>
+        <div className="absolute right-0 w-[90vw] h-[60vh] -z-10 flex">
+            <div className="w-2/3 ">
+                
+            </div>
+            <div className="w-1/3 h-full">
+                <Canvas>
+                    <ambientLight />
+                    <OrbitControls
+                        enableZoom={false}
+                        enablePan={false} // Disable manual panning
+                        maxPolarAngle={Math.PI / 2}
+                        minPolarAngle={Math.PI / 2}
+                    />
+                    <Suspense fallback={null}>
+                        <group position={position}>
+                            <Rocket scale={0.5} />
+                        </group>
+                    </Suspense>
+                </Canvas>
+            </div>
         </div>
     );
 };

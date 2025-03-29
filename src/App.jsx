@@ -2,8 +2,8 @@ import {
   About,
 } from "./page";
 import { 
+  AboutInfoForSmMD,
   Head, 
-  RocketCanvas, 
   StarsCanvas 
 } from "./components";
 
@@ -15,6 +15,7 @@ function App() {
         <Head />
         <About />
       </div>
+        {/* <AboutInfoForSmMD /> */}
     </main>
   );
 }

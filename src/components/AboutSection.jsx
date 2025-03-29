@@ -1,34 +1,109 @@
-import React from "react";
+import GitHubCalendar from 'react-github-calendar';
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import meImg from "/img/me.jpg"
 
-const MyCustomComponent = () => {
+const About = () => {
     return (
-        <div className="grid p-2 bg-white border-2 border-black 
-                        md:grid-cols-1 md:grid-rows-4 
-                        lg:grid-cols-3 lg:grid-rows-2 gap-2 w-full h-full">
-            
-            {/* Red Box - Full width on sm/md, 1 col on lg */}
-            <div className="bg-red-500 border border-black 
-                            md:col-span-1 md:row-span-1 
-                            lg:col-span-1 lg:row-span-1">
+        <div className="min-h-screen bg-[#181818] text-white p-10 flex flex-col items-center pt-20">
+            {/* Bento Grid Layout */}
+            <div className="hidden lg:grid grid-cols-3 gap-5 max-w-6xl w-full">
+                {/* Avatar Section */}
+                <div className="col-span-1 bg-[#232323] rounded-2xl flex justify-center items-center h-[50vh]">
+                    <img
+                        src={meImg}
+                        alt=""
+                        className='w-full h-full object-cover rounded-xl'
+                    />
+                </div>
+
+                {/* About Me Section */}
+                <div className='col-span-2 space-y-5'>
+                    <div className="col-span-2 bg-[#323232] p-5 py-6 rounded-2xl flex flex-col h-[35vh] overflow-hidden">
+                        <h2 className="text-3xl font-bold mb-3">About Me</h2>
+                        <div className='pb-2'>
+                            <p className="text-gray-300">
+                                Hi, I'm a passionate web developer specializing in front-end and back-end technologies.
+                                I enjoy building interactive experiences and solving problems with code.
+                            </p>
+                            <p className="text-gray-300 mt-2">
+                                Always eager to take on new challenges, I continuously strive to optimize performance and enhance user experiences.
+                                With a keen interest in AI and automation, I explore ways to integrate intelligent solutions into my projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex justify-center gap-5">
+                        <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition">
+                            <FaGithub size={24} /> Github
+                        </a>
+                        <a href="https://instagram.com/yourinsta" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition">
+                            <FaInstagram size={24} /> Instagram
+                        </a>
+                        <a href="https://twitter.com/yourx" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition">
+                            <FaXTwitter size={24} /> X
+                        </a>
+                        <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition">
+                            <FaLinkedin size={24} /> LinkedIn
+                        </a>
+                    </div>
+                </div>
+                {/* GitHub Contribution Section */}
+                <div className="col-span-3 bg-[#232323] p-5 rounded-2xl flex flex-col items-center h-[30vh] w-full">
+                    <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
+                </div>
             </div>
 
-            {/* Other Boxes */}
-            <div className="bg-yellow-400 border border-black 
-                            md:col-span-1 md:row-span-1 
-                            lg:col-span-2 lg:row-span-1">
-            </div>
-
-            <div className="bg-blue-600 border border-black 
-                            md:col-span-1 md:row-span-1 
-                            lg:col-span-1 lg:row-span-1">
-            </div>
-
-            <div className="bg-sky-300 border border-black 
-                            md:col-span-1 md:row-span-1 
-                            lg:col-span-1 lg:row-span-1">
+            {/* Layout for md and sm */}
+            <div className='lg:hidden flex flex-col gap-5 w-full max-w-6xl'>
+                {/* Avatar Section */}
+                <div className="bg-[#232323] rounded-2xl flex justify-center items-center h-[50vh]">
+                    <img
+                        src={meImg}
+                        alt=""
+                        className='w-full h-full object-contain rounded-xl'
+                    />
+                </div>
+                
+                {/* About Me Section */}
+                <div className='bg-[#323232] p-5 py-6 rounded-2xl flex flex-col overflow-hidden'>
+                    <h2 className="text-3xl font-bold mb-3">About Me</h2>
+                    <div className='pb-2'>
+                        <p className="text-gray-300">
+                            Hi, I'm a passionate web developer specializing in front-end and back-end technologies.
+                            I enjoy building interactive experiences and solving problems with code.
+                        </p>
+                        <p className="text-gray-300 mt-2">
+                            Always eager to take on new challenges, I continuously strive to optimize performance and enhance user experiences.
+                            With a keen interest in AI and automation, I explore ways to integrate intelligent solutions into my projects.
+                        </p>
+                    </div>
+                </div>
+                
+                {/* Social Links Section */}
+                <div className="flex flex-col items-center gap-3">
+                    <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition w-full justify-center">
+                        <FaGithub size={24} /> Github
+                    </a>
+                    <a href="https://instagram.com/yourinsta" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition w-full justify-center">
+                        <FaInstagram size={24} /> Instagram
+                    </a>
+                    <a href="https://twitter.com/yourx" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition w-full justify-center">
+                        <FaXTwitter size={24} /> X
+                    </a>
+                    <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition w-full justify-center">
+                        <FaLinkedin size={24} /> LinkedIn
+                    </a>
+                </div>
+                
+                {/* GitHub Contribution Section */}
+                <div className="bg-[#232323] p-5 rounded-2xl flex flex-col items-center h-[30vh] w-full">
+                    <h1 className="text-2xl font-bold text-white pb-5">
+                        Days I <strong className="text-purple-400">Code</strong>
+                    </h1>
+                    <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
+                </div>
             </div>
         </div>
     );
 };
 
-export default MyCustomComponent;
+export default About;
