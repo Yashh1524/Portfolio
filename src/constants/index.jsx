@@ -33,3 +33,25 @@ export const socialLinks = [{
         href: "https://www.linkedin.com/in/yashbhut1524/", icon: <FaLinkedin size={24} />, label: "LinkedIn"
     }
 ]
+
+export const techStack = [
+    // Programming Languages
+    { name: "JavaScript", img: "/img/js.svg" },
+    { name: "TypeScript", img: "/img/ts.svg" },
+    { name: "Java", img: "/img/java.svg" },
+    { name: "C", img: "/img/c.svg" },
+    { name: "Python", img: "/img/py.svg" },
+    // Frontend Technologies
+    { name: "React", img: "/img/react.svg" },
+    { name: "Next.js", img: "/img/nextjs.svg" },
+    { name: "Tailwind CSS", img: "/img/tailwindcss.svg" },
+    // Backend Technologies
+    { name: "Node.js", img: "/img/nodejs.svg" },
+    { name: "Express.js", img: "/img/expressjs.svg" },
+    // Databases
+    { name: "MongoDB", img: "/img/mongodb.svg" },
+    { name: "SQL", img: "/img/sql.svg" },
+    { name: "Firebase", img: "/img/firebase.svg" },
+    // Other Tools
+    { name: "Git", img: "/img/git.svg" },
+];

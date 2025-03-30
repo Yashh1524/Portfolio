@@ -4,7 +4,8 @@ import { ScrollTrigger } from "gsap/all";
 import { 
     AboutInfoForSmMD,
     AboutSection, 
-    RocketCanvas
+    RocketCanvas,
+    TechStacks,
 } from "../components";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -53,9 +54,12 @@ const About = () => {
                     </div>
                     <RocketCanvas />
                 </div>
-            </div>
-            <div className="text-white">
-                <AboutInfoForSmMD />
+                <div>
+                    <AboutInfoForSmMD />
+                </div>
+                    <div className="w-screen bg-[#181818] flex item-center justify-center">
+                        <TechStacks />  
+                    </div>
             </div>
         </>
     );

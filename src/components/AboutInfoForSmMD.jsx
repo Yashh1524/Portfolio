@@ -1,8 +1,9 @@
 import GitHubCalendar from 'react-github-calendar';
 import React from 'react';
+
 export const AboutInfoForSmMD = () => {
     return (
-        <div className='lg:hidden flex flex-col gap-5 max-w-6xl bg-[#181818] pt-5 px-10 pb-12 ]'>
+        <div className='lg:hidden flex flex-col gap-5 max-w-6xl bg-[#181818] pt-5 px-10 pb-1 text-white'>
                 {/* About Me Section */}
                 <div className='bg-[#323232] p-5 py-6 rounded-2xl flex flex-col'>
                     <h2 className="text-3xl font-bold mb-3">About Me</h2>

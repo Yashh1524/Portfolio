@@ -6,7 +6,7 @@ import RobotCanvas from "./canvas/RobotCanvas";
 import Head from "./Head";
 import RocketCanvas from "./canvas/RocketCanvas";
 import { AboutInfoForSmMD } from "./AboutInfoForSmMD";
-import { CompleteAbout } from "./CompleteAbout";
+import TechStacks from "./TechStacks";
 
 export {
     Robot,
@@ -17,5 +17,5 @@ export {
     Head,
     RocketCanvas,
     AboutInfoForSmMD,
-    CompleteAbout
+    TechStacks,
 }
