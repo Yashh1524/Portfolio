@@ -34,7 +34,9 @@ const RobotCanvas = () => {
         <div className="absolute w-full h-full flex justify-center items-center">
             <Canvas className="w-full h-full" gl={{preserveDrawingBuffer:true}}>
                 <ambientLight intensity={1} />
-                <OrbitControls enableZoom={false} />
+                <OrbitControls 
+                    enableZoom={false} 
+                />
                 <MovingCamera />
                 <Suspense fallback={null}>
                     <Robot scale={modelScale} position={[0, -0.5, 0]} />

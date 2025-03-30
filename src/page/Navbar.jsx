@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { navLinks } from "../constants/index.js";
+import { navLinks } from "../constants";
 
 const NavItems = ({ onClick = () => { } }) => (
     <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-50">
