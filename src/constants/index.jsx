@@ -1,4 +1,10 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter} from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+
+export const roles = [
+    "Building Seamless Web Apps",
+    "MERN Stack Enthusiast",
+    "UI/UX Explorer"
+];
 
 export const navLinks = [
     {
@@ -23,14 +29,27 @@ export const navLinks = [
     },
 ];
 
-export const socialLinks = [{
-        href: "https://github.com/YashBhut1524", icon: <FaGithub size={24} />, label: "Github"
-    }, {
-        href: "https://www.instagram.com/yashh_1524/", icon: <FaInstagram size={24} />, label: "Instagram"
-    }, {
-        href: "https://x.com/YaShh1524", icon: <FaXTwitter size={24} />, label: "X"
-    }, {
-        href: "https://www.linkedin.com/in/yashbhut1524/", icon: <FaLinkedin size={24} />, label: "LinkedIn"
+export const socialLinks = [
+    {
+        href: "https://github.com/YashBhut1524",
+        icon: <FaGithub size={24} />,
+        label: "Github"
+    }, 
+    {
+        
+        href: "https://www.instagram.com/yashh_1524/", 
+        icon: <FaInstagram size={24} />, 
+        label: "Instagram"
+    }, 
+    {
+        href: "https://x.com/YaShh1524", 
+        icon: <FaXTwitter size={24} />, 
+        label: "X"
+    }, 
+    {
+        href: "https://www.linkedin.com/in/yashbhut1524/", 
+        icon: <FaLinkedin size={24} />, 
+        label: "LinkedIn"
     }
 ]
 
@@ -55,3 +74,69 @@ export const techStack = [
     // Other Tools
     { name: "Git", img: "/img/git.svg" },
 ];
+
+export const projects = [
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+    {
+        title: "BlinkIt-Clone",
+        description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
+        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        liveLink: "https://blnkit-clone.vercel.app/",
+        image: "/img/projectImg/blinkitClone.png"
+    },
+]

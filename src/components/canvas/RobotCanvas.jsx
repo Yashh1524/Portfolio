@@ -36,6 +36,7 @@ const RobotCanvas = () => {
                 <ambientLight intensity={1} />
                 <OrbitControls 
                     enableZoom={false} 
+                    // enableRotation={true}
                 />
                 <MovingCamera />
                 <Suspense fallback={null}>

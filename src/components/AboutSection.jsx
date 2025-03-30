@@ -1,5 +1,5 @@
 import GitHubCalendar from 'react-github-calendar';
-import meImg from "/img/me.jpg"
+import meImg from "/img/me.jpg";
 import { useEffect, useRef } from 'react';
 import gsap from "gsap";
 import { socialLinks } from '../constants';
@@ -9,13 +9,6 @@ const About = () => {
 
     useEffect(() => {
         socialLinksRef.current = socialLinksRef.current.filter(el => el); // Remove undefined/null
-
-        // Ensure refs are set correctly
-        setTimeout(() => {
-            socialLinksRef.current.forEach((el) => {
-                gsap.set(el, { scale: 1, opacity: 0.8 });
-            });
-        }, 50);  // Small delay to allow DOM update
     }, []);
 
     const handleMouseEnter = (index) => {
@@ -25,7 +18,7 @@ const About = () => {
                 opacity: 1,
                 boxShadow: "0px 0px 20px rgba(255,255,255,0.15)",
                 duration: 0.01,
-                ease: "power3.out",
+                ease: "power1.out",
             });
         }
     };
@@ -47,7 +40,9 @@ const About = () => {
             {/* Bento Grid Layout */}
             <div className="hidden lg:grid grid-cols-3 gap-5 max-w-6xl w-full">
                 {/* Avatar Section */}
-                <div className="col-span-1 bg-[#232323] rounded-2xl flex justify-center items-center h-[50vh]">
+                <div
+                    className="col-span-1 bg-[#232323] rounded-2xl flex justify-center items-center h-[50vh] transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]"
+                >
                     <img
                         src={meImg}
                         alt="Me"
@@ -56,10 +51,12 @@ const About = () => {
                 </div>
 
                 {/* About Me Section */}
-                <div className='col-span-2 space-y-5'>
-                    <div className="col-span-2 bg-[#323232] p-5 py-6 rounded-2xl flex flex-col h-[35vh] overflow-hidden">
+                <div className="col-span-2 space-y-5">
+                    <div
+                        className="col-span-2 bg-[#323232] p-5 py-6 rounded-2xl flex flex-col h-[35vh] overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]"
+                    >
                         <h2 className="text-3xl font-bold mb-3">About Me</h2>
-                        <div className='pb-2'>
+                        <div className="pb-2">
                             <p className="text-gray-300">
                                 Hi, I'm a passionate web developer specializing in front-end and back-end technologies.
                                 I enjoy building interactive experiences and solving problems with code.
@@ -80,7 +77,7 @@ const About = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 ref={(el) => { 
-                                    socialLinksRef.current[index] = el;  // Ensure refs are set properly
+                                    socialLinksRef.current[index] = el;
                                 }}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={() => handleMouseLeave(index)}
@@ -93,22 +90,26 @@ const About = () => {
                 </div>
 
                 {/* GitHub Contribution Section */}
-                <div className="col-span-3 bg-[#232323] p-5 rounded-2xl flex flex-col items-center h-fit w-full xl:mt-5 xl:mb-4">
+                <div 
+                    className="col-span-3 bg-[#232323] p-3 rounded-2xl flex flex-col items-center h-fit w-full xl:mt-5 xl:mb-4 transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]"
+                >
                     <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
                 </div>
             </div>
 
             {/* Mobile Layout */}
-            <div className='lg:hidden flex flex-col gap-5 w-full max-w-6xl'>
+            <div className="lg:hidden flex flex-col gap-5 w-full max-w-6xl">
                 {/* Avatar Section */}
-                <div className="bg-[#232323] rounded-2xl flex justify-center items-center h-[38vh]">
+                <div
+                    className="bg-[#232323] rounded-2xl flex justify-center items-center h-[38vh] transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]"
+                >
                     <img
                         src={meImg}
                         alt="Me"
-                        className='w-full h-full object-contain md:object-contain rounded-xl'
+                        className="w-full h-full object-contain md:object-contain rounded-xl"
                     />
                 </div>
-                
+
                 {/* Social Links */}
                 <div className="grid grid-cols-1 gap-3 w-full">
                     {socialLinks.map((link, index) => (

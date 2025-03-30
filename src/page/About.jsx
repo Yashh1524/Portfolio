@@ -7,10 +7,12 @@ import {
     RocketCanvas,
     TechStacks,
 } from "../components";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+
     useGSAP(() => {
         const clipAnimation = gsap.timeline({
             scrollTrigger: {
@@ -28,12 +30,11 @@ const About = () => {
             height: "100vh",
             borderRadius: 0,
         });
-
     });
 
     return (
         <>
-            <div id="about" className="min-h-screen w-full relative overflow-y-auto no-scrollbar">
+            <div id="about" data-scroll data-scoll-speed="-0.6" className="min-h-screen w-full relative overflow-y-auto no-scrollbar pb-2">
                 <div className="relative mb-8 mt-20 flex flex-col items-center gap-5">
                     <p className="font-general text-sm uppercase md:text-[5rem] text-white">
                         Know Who I'M

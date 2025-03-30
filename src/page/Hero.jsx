@@ -2,12 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { RobotCanvas } from "../components";
-
-const roles = [
-    "Building Seamless Web Apps",
-    "MERN Stack Enthusiast",
-    "UI/UX Explorer"
-];
+import { roles } from "../constants";
 
 const Hero = () => {
     const [roleIndex, setRoleIndex] = useState(0);
@@ -38,7 +33,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="relative min-h-screen w-full flex flex-col items-center justify-center pb-20">
+        <section id="home" className="relative min-h-screen w-full flex flex-col items-center justify-center pb-20">
             {/* Hero Text */}
             <div className="w-full text-center z-40">
                 <p
