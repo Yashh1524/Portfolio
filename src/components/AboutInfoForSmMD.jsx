@@ -3,7 +3,7 @@ import React from 'react';
 
 export const AboutInfoForSmMD = () => {
     return (
-        <div className='lg:hidden flex flex-col gap-5 max-w-6xl bg-[#181818] pt-5 px-2 md:px-10 lg:px-10 pb-1 text-white'>
+        <div className='lg:hidden flex flex-col gap-5 max-w-6xl bg-[#181818] mt-10 pt-5 px-2 md:px-10 lg:px-10 pb-1 text-white'>
                 {/* About Me Section */}
                 <div className='bg-[#323232] p-5 py-6 rounded-2xl flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]'>
                     <h2 className="text-3xl font-bold mb-3">About Me</h2>

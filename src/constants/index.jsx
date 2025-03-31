@@ -61,7 +61,7 @@ export const socialLinks = [
     {
         href: "https://www.linkedin.com/in/yashbhut1524/",
         icon: <FaYoutube size={30} />,
-        label: "LinkedIn"
+        label: "Youtube"
     },
 ];
 
