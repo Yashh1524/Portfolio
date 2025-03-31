@@ -38,16 +38,20 @@ function ProjectsScroller() {
 
     return (
         <div ref={triggerRef} className="overflow-hidden">
-            <div ref={sectionRef} className="relative flex w-fit h-screen items-center space-x-10 pr-10 ml-10 mr-30">
+            <div ref={sectionRef} className="relative flex w-[750vh] h-screen items-center space-x-10 pr-10 ml-10 mr-30">
                 {
                     projects.map((project, index) => (
                         <ProjectCard 
                             key={index}
                             title={project?.title}
                             description={project?.description}
+                            fullDescription={project?.fullDescription}
                             repoLink={project?.repoLink} 
                             liveLink={project?.liveLink}
+                            ytLink={project?.ytLink}
                             image={project?.image}
+                            video={project?.video}
+                            techStackUsed={project?.techStackUsed}
                         />
                     ))
                 }

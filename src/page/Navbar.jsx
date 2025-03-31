@@ -1,17 +1,33 @@
 import { useState } from "react";
 import { navLinks } from "../constants";
 
-const NavItems = ({ onClick = () => { } }) => (
-    <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-50">
-        {navLinks.map((item) => (
-            <li key={item.id} className="text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5">
-                <a href={item.href} className="text-lg md:text-base hover:text-white transition-colors" onClick={onClick}>
-                    {item.name}
-                </a>
-            </li>
-        ))}
-    </ul>
-);
+const NavItems = ({ onClick = () => {} }) => {
+    const [activeItem, setActiveItem] = useState(1);
+
+    return (
+        <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-50">
+            {navLinks.map((item) => (
+                <li
+                    key={item.id}
+                    className={`text-neutral-400 font-generalsans max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 transition-colors ${
+                        activeItem === item.id ? 'text-white font-bold' : 'hover:text-white'
+                    }`}
+                >
+                    <a
+                        href={item.href}
+                        className="text-lg md:text-base transition-colors"
+                        onClick={() => {
+                            setActiveItem(item.id);
+                            onClick();
+                        }}
+                    >
+                        {item.name}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    );
+};
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

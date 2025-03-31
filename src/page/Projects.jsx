@@ -29,7 +29,7 @@ function Projects() {
 
     return (
         <section id="projects">
-            <div className="relative flex flex-col items-center space-x-10 pr-10">
+            <div className="relative flex flex-col items-center space-x-10 pr-10 mt-10">
                 <h1
                     className="font-general text-sm uppercase md:text-[4rem] text-white py-10"
                     ref={textRef}
