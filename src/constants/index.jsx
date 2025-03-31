@@ -55,24 +55,24 @@ export const socialLinks = [
 
 export const techStack = [
     // Programming Languages
-    { name: "JavaScript", img: "/img/js.svg" },
-    { name: "TypeScript", img: "/img/ts.svg" },
-    { name: "Java", img: "/img/java.svg" },
-    { name: "C", img: "/img/c.svg" },
-    { name: "Python", img: "/img/py.svg" },
+    { name: "JavaScript", img: "/img/tech/js.svg" },
+    { name: "TypeScript", img: "/img/tech/ts.svg" },
+    { name: "Java", img: "/img/tech/java.svg" },
+    { name: "C", img: "/img/tech/c.svg" },
+    { name: "Python", img: "/img/tech/py.svg" },
     // Frontend Technologies
-    { name: "React", img: "/img/react.svg" },
-    { name: "Next.js", img: "/img/nextjs.svg" },
-    { name: "Tailwind CSS", img: "/img/tailwindcss.svg" },
+    { name: "React", img: "/img/tech/react.svg" },
+    { name: "Next.js", img: "/img/tech/nextjs.svg" },
+    { name: "Tailwind CSS", img: "/img/tech/tailwindcss.svg" },
     // Backend Technologies
-    { name: "Node.js", img: "/img/nodejs.svg" },
-    { name: "Express.js", img: "/img/expressjs.svg" },
+    { name: "Node.js", img: "/img/tech/nodejs.svg" },
+    { name: "Express.js", img: "/img/tech/expressjs.svg" },
     // Databases
-    { name: "MongoDB", img: "/img/mongodb.svg" },
-    { name: "SQL", img: "/img/sql.svg" },
-    { name: "Firebase", img: "/img/firebase.svg" },
+    { name: "MongoDB", img: "/img/tech/mongodb.svg" },
+    { name: "SQL", img: "/img/tech/sql.svg" },
+    { name: "Firebase", img: "/img/tech/firebase.svg" },
     // Other Tools
-    { name: "Git", img: "/img/git.svg" },
+    { name: "Git", img: "/img/tech/git.svg" },
 ];
 
 export const projects = [
@@ -88,19 +88,31 @@ export const projects = [
         techStackUsed: [
             {
                 name: "MongoDB",
-                img: "/img/mongodb.svg"
+                img: "/img/tech/mongodb.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
             },
             {
                 name: "Expressjs",
-                img: "/img/expressjs.svg"
+                img: "/img/tech/expressjs.svg"
             },
             {
                 name: "React",
-                img: "/img/react.svg"
+                img: "/img/tech/react.svg"
             },
             {
                 name: "Nodejs",
-                img: "/img/nodejs.svg"
+                img: "/img/tech/nodejs.svg"
+            },
+            {
+                name: "Stripe",
+                img: "/img/tech/stripe.svg"
+            },
+            {
+                name: "Razorpay",
+                img: "/img/tech/razorpay.png"
             },
         ]
     },
@@ -116,20 +128,73 @@ export const projects = [
         techStackUsed: [
             {
                 name: "FireBase",
-                img: "/img/firebase.svg"
+                img: "/img/tech/firebase.svg"
             },
             {
                 name: "React",
-                img: "/img/react.svg"
+                img: "/img/tech/react.svg"
             },
             {
                 name: "Nodejs",
-                img: "/img/nodejs.svg"
+                img: "/img/tech/nodejs.svg"
             },
             {
                 name: "Gemini",
-                img: "/img/gemini.svg"
+                img: "/img/tech/gemini.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
             },
         ]
     },
+    {
+        title: "OCR TOOL",
+        description: "An OCR tool built with Python and pytesseract that extracts text from images via a custom snipping tool or image upload.",
+        fullDescription: "This OCR (Optical Character Recognition) tool, built with Python and pytesseract, allows users to extract text from images efficiently. It offers two methods for text extraction: a custom snipping tool that lets users capture a specific area of the screen and an option to upload an image from their device. With a simple and user-friendly approach, this tool makes text recognition from images quick and convenient.",
+        repoLink: "https://github.com/YashBhut1524/OCR-Tool-App-using-PyTesseract",
+        liveLink: "",
+        ytLink: "",
+        image: "/img/projectImg/ocr.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Python",
+                img: "/img/tech/py.svg"
+            },
+            {
+                name: "Tesseract",
+                img: "/img/tech/ocr.png"
+            },
+            
+        ]
+    },
+    {
+        title: "OCR TOOL",
+        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
+        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
+        repoLink: "https://github.com/YashBhut1524/PitchHere",
+        liveLink: "https://pitch-here.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/pitchHere.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Nextjs",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Sanity",
+                img: "/img/tech/sanity.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    }
 ]
