@@ -36,7 +36,7 @@ const About = () => {
         <>
             <div id="about" data-scroll data-scoll-speed="-0.6" className="min-h-screen w-full relative overflow-y-auto no-scrollbar pb-2">
                 <div className="relative mb-8 mt-20 flex flex-col items-center gap-5">
-                    <p className="font-general text-sm uppercase md:text-[5rem] text-white">
+                    <p className="font-general text-[1.5rem] uppercase md:text-[5rem] bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Know Who I'M
                     </p>
 

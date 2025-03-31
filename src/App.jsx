@@ -1,11 +1,12 @@
-import { 
+import {
   About,
+  Contact,
   Projects,
 } from "./page";
-import { 
+import {
   AboutSection,
-  Head, 
-  ProjectsScroller, 
+  Head,
+  ProjectsScroller,
   StarsCanvas,
 } from "./components";
 
@@ -18,7 +19,7 @@ function App() {
         <Head />
         <About />
         <Projects />
-        <AboutSection />
+        <Contact />
       </div>
     </main>
   );

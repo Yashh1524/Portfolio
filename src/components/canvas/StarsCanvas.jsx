@@ -23,7 +23,7 @@ const StarsCanvas = () => {
             // initial={{ opacity: 0, y: 100 }} // Start from below with opacity 0
             // animate={{ opacity: 1, y: 0 }} // Move to original position with fade-in
             // transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute top-0 left-0 w-full h-full -z-10"
+            className="absolute top-0 left-0 w-full h-full   -z-10"
         >
             <Canvas gl={{preserveDrawingBuffer:true}}>
                 <ambientLight />

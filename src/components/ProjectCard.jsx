@@ -51,7 +51,7 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
                                     controls
                                     loop
                                     muted
-                                    className="object-cover h-full w-full p-2"
+                                    className="object-cover h-full w-full"
                                 />
                             </div>
                         )

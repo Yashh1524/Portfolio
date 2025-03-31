@@ -1,10 +1,18 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaEnvelope  } from "react-icons/fa6";
 
 export const roles = [
     "Building Seamless Web Apps",
     "MERN Stack Enthusiast",
-    "UI/UX Explorer"
+    "UI/UX Explorer",
+    "Performance Optimization Geek",
+    "AI & Automation Enthusiast",
+    "Problem Solver with Code",
+    "Full-Stack Innovator",
+    "Crafting Interactive Experiences",
+    "Tech Explorer & Innovator",
+    "Turning Ideas into Scalable Solutions"
 ];
+
 
 export const navLinks = [
     {
@@ -36,7 +44,6 @@ export const socialLinks = [
         label: "Github"
     },
     {
-
         href: "https://www.instagram.com/yashh_1524/",
         icon: <FaInstagram size={24} />,
         label: "Instagram"
@@ -50,8 +57,8 @@ export const socialLinks = [
         href: "https://www.linkedin.com/in/yashbhut1524/",
         icon: <FaLinkedin size={24} />,
         label: "LinkedIn"
-    }
-]
+    },
+];
 
 export const techStack = [
     // Programming Languages
@@ -170,6 +177,34 @@ export const projects = [
         ]
     },
     {
+        title: "Pitch Here",
+        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
+        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
+        repoLink: "https://github.com/YashBhut1524/PitchHere",
+        liveLink: "https://pitch-here.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/pitchHere.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Nextjs",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Sanity",
+                img: "/img/tech/sanity.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    },
+    {
         title: "OCR TOOL",
         description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
         fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
@@ -196,5 +231,145 @@ export const projects = [
                 img: "/img/tech/oauth.svg"
             },
         ]
-    }
+    },{
+        title: "OCR TOOL",
+        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
+        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
+        repoLink: "https://github.com/YashBhut1524/PitchHere",
+        liveLink: "https://pitch-here.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/pitchHere.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Nextjs",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Sanity",
+                img: "/img/tech/sanity.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    },{
+        title: "OCR TOOL",
+        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
+        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
+        repoLink: "https://github.com/YashBhut1524/PitchHere",
+        liveLink: "https://pitch-here.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/pitchHere.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Nextjs",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Sanity",
+                img: "/img/tech/sanity.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    },{
+        title: "OCR TOOL",
+        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
+        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
+        repoLink: "https://github.com/YashBhut1524/PitchHere",
+        liveLink: "https://pitch-here.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/pitchHere.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Nextjs",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Sanity",
+                img: "/img/tech/sanity.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    },{
+        title: "OCR TOOL",
+        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
+        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
+        repoLink: "https://github.com/YashBhut1524/PitchHere",
+        liveLink: "https://pitch-here.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/pitchHere.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "Nextjs",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Sanity",
+                img: "/img/tech/sanity.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    },
+    {
+        title: "AI Trip Planner",
+        description: "AI Trip Planner is a React and Firebase-based app using Gemini AI to create personalized trip plans, suggest hotels, and generate day-wise itineraries.",
+        fullDescription: "AI Trip Planner is a smart travel planning app built with React, Firebase, and Gemini AI. It helps users create personalized trip plans based on their budget and travel companions. The app provides hotel recommendations and generates a day-wise itinerary, ensuring a seamless and well-organized travel experience.",
+        repoLink: "https://github.com/YashBhut1524/AI-TripPlanner",
+        liveLink: "https://ai-trip-planner-virid.vercel.app/",
+        ytLink: "",
+        image: "/img/projectImg/aiTrip.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "FireBase",
+                img: "/img/tech/firebase.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Nodejs",
+                img: "/img/tech/nodejs.svg"
+            },
+            {
+                name: "Gemini",
+                img: "/img/tech/gemini.svg"
+            },
+            {
+                name: "Oauth",
+                img: "/img/tech/oauth.svg"
+            },
+        ]
+    },
 ]

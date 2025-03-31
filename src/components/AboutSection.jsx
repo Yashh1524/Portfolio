@@ -1,12 +1,13 @@
 import GitHubCalendar from 'react-github-calendar';
 import meImg from "/img/me.jpg";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from "gsap";
 import { socialLinks } from '../constants';
+import { FaEnvelope } from 'react-icons/fa6';
 
 const About = () => {
     const socialLinksRef = useRef([]);
-
+    const [copied, setCopied] = useState(false);
     useEffect(() => {
         socialLinksRef.current = socialLinksRef.current.filter(el => el); // Remove undefined/null
     }, []);
@@ -36,7 +37,7 @@ const About = () => {
     };
 
     return (
-        <section className="bg-[#181818] text-white p-10 flex flex-col items-center pt-20 h-full">
+        <section className="bg-[#181818] text-white px-2 md:px-10 lg:px-10 py-10 flex flex-col items-center pt-20 h-full">
             {/* Bento Grid Layout */}
             <div className="hidden lg:grid grid-cols-3 gap-5 max-w-6xl w-full">
                 {/* Avatar Section */}
@@ -71,12 +72,12 @@ const About = () => {
                     {/* Social Links */}
                     <div className="flex justify-center gap-5 mt-8">
                         {socialLinks.map((link, index) => (
-                            <a 
-                                key={index} 
-                                href={link.href} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                ref={(el) => { 
+                            <a
+                                key={index}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ref={(el) => {
                                     socialLinksRef.current[index] = el;
                                 }}
                                 onMouseEnter={() => handleMouseEnter(index)}
@@ -86,11 +87,29 @@ const About = () => {
                                 {link.icon} {link.label}
                             </a>
                         ))}
+
+                        {/* Gmail Button */}
+                        <button
+                            onClick={() => {
+                                navigator.clipboard.writeText("yashhbhut15@gmail.com");
+                                setCopied(true);
+                                setTimeout(() => setCopied(false), 1000);
+                            }}
+                            className="relative bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition "
+                        >
+                            <FaEnvelope size={24} /> Gmail
+                            {copied && (
+                                <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-[#6b6e6c] text-white text-xs px-2 py-1 rounded-md shadow-lg">
+                                    Email Copied!
+                                </span>
+                            )}
+                        </button>
                     </div>
+
                 </div>
 
                 {/* GitHub Contribution Section */}
-                <div 
+                <div
                     className="col-span-3 bg-[#232323] p-3 rounded-2xl flex flex-col items-center h-fit w-full xl:mt-5 xl:mb-4 transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]"
                 >
                     <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
@@ -113,13 +132,13 @@ const About = () => {
                 {/* Social Links */}
                 <div className="grid grid-cols-1 gap-3 w-full">
                     {socialLinks.map((link, index) => (
-                        <a 
-                            key={index} 
-                            href={link.href} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            ref={(el) => { 
-                                socialLinksRef.current[index + socialLinks.length] = el; 
+                        <a
+                            key={index}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ref={(el) => {
+                                socialLinksRef.current[index + socialLinks.length] = el;
                             }}
                             onMouseEnter={() => handleMouseEnter(index + socialLinks.length)}
                             onMouseLeave={() => handleMouseLeave(index + socialLinks.length)}
