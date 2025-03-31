@@ -59,7 +59,7 @@ const Contact = () => {
     };
 
     return (
-        <section ref={triggerRef} className="relative flex items-center justify-center min-h-screen overflow-hidden">
+        <section id='contact' ref={triggerRef} className="relative flex items-center justify-center min-h-screen overflow-hidden mt-10">
             <StarsCanvas />
             
             <div ref={formRef} className="absolute inset-0 flex flex-col items-center justify-center text-white px-6">

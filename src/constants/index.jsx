@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaEnvelope  } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaEnvelope, FaYoutube  } from "react-icons/fa6";
 
 export const roles = [
     "Building Seamless Web Apps",
@@ -40,22 +40,27 @@ export const navLinks = [
 export const socialLinks = [
     {
         href: "https://github.com/YashBhut1524",
-        icon: <FaGithub size={24} />,
+        icon: <FaGithub size={30} />,
         label: "Github"
     },
     {
         href: "https://www.instagram.com/yashh_1524/",
-        icon: <FaInstagram size={24} />,
+        icon: <FaInstagram size={30} />,
         label: "Instagram"
     },
     {
         href: "https://x.com/YaShh1524",
-        icon: <FaXTwitter size={24} />,
+        icon: <FaXTwitter size={30} />,
         label: "X"
     },
     {
         href: "https://www.linkedin.com/in/yashbhut1524/",
-        icon: <FaLinkedin size={24} />,
+        icon: <FaLinkedin size={30} />,
+        label: "LinkedIn"
+    },
+    {
+        href: "https://www.linkedin.com/in/yashbhut1524/",
+        icon: <FaYoutube size={30} />,
         label: "LinkedIn"
     },
 ];
@@ -96,10 +101,6 @@ export const projects = [
             {
                 name: "MongoDB",
                 img: "/img/tech/mongodb.svg"
-            },
-            {
-                name: "Oauth",
-                img: "/img/tech/oauth.svg"
             },
             {
                 name: "Expressjs",
@@ -161,9 +162,9 @@ export const projects = [
         fullDescription: "This OCR (Optical Character Recognition) tool, built with Python and pytesseract, allows users to extract text from images efficiently. It offers two methods for text extraction: a custom snipping tool that lets users capture a specific area of the screen and an option to upload an image from their device. With a simple and user-friendly approach, this tool makes text recognition from images quick and convenient.",
         repoLink: "https://github.com/YashBhut1524/OCR-Tool-App-using-PyTesseract",
         liveLink: "",
-        ytLink: "",
+        ytLink: "https://www.youtube.com/watch?v=uTJTmOiS8ws",
         image: "/img/projectImg/ocr.png",
-        video: "",
+        video: "/video/ocr.mp4",
         techStackUsed: [
             {
                 name: "Python",
@@ -173,7 +174,6 @@ export const projects = [
                 name: "Tesseract",
                 img: "/img/tech/ocr.png"
             },
-            
         ]
     },
     {

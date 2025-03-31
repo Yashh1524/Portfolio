@@ -48,7 +48,7 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
                                 <video
                                     src={video}
                                     autoPlay
-                                    controls
+                                    // controls
                                     loop
                                     muted
                                     className="object-cover h-full w-full"

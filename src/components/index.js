@@ -8,6 +8,7 @@ import RocketCanvas from "./canvas/RocketCanvas";
 import { AboutInfoForSmMD } from "./AboutInfoForSmMD";
 import TechStacks from "./TechStacks";
 import ProjectsScroller from "./ProjectsScroller";
+import Loader from "./Loader";
 
 export {
     Robot,
@@ -19,5 +20,6 @@ export {
     RocketCanvas,
     AboutInfoForSmMD,
     TechStacks,
-    ProjectsScroller
+    ProjectsScroller,
+    Loader
 }
