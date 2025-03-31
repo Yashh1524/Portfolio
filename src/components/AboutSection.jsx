@@ -14,19 +14,6 @@ const About = () => {
         socialLinksRef.current = socialLinksRef.current.filter(el => el); // Remove undefined/null
     }, []);
 
-    useEffect(() => {
-        if (gmailButtonRef.current) {
-            gmailButtonRef.current.addEventListener("mouseenter", handleGmailEnter);
-            gmailButtonRef.current.addEventListener("mouseleave", handleGmailLeave);
-        }
-        return () => {
-            if (gmailButtonRef.current) {
-                gmailButtonRef.current.removeEventListener("mouseenter", handleGmailEnter);
-                gmailButtonRef.current.removeEventListener("mouseleave", handleGmailLeave);
-            }
-        };
-    }, []);
-
     // Hover animation for social links
     const handleMouseEnter = (index) => {
         if (socialLinksRef.current[index]) {
@@ -52,7 +39,7 @@ const About = () => {
         }
     };
 
-    // Separate hover animation for Gmail button
+    // Hover animation for Gmail button (Fixed)
     const handleGmailEnter = () => {
         gsap.to(gmailButtonRef.current, {
             scale: 1.2,
@@ -70,6 +57,7 @@ const About = () => {
             ease: "power3.inOut",
         });
     };
+
     return (
         <section className="bg-[#181818] text-white px-2 md:px-10 lg:px-10 py-10 flex flex-col items-center pt-20 h-full">
             <div className="hidden lg:grid grid-cols-3 gap-5 max-w-6xl w-full">
@@ -109,7 +97,7 @@ const About = () => {
                             </a>
                         ))}
 
-                        {/* Gmail Button */}
+                        {/* Gmail Button with Animation Fixed */}
                         <button
                             onClick={() => {
                                 navigator.clipboard.writeText("yashhbhut15@gmail.com");
@@ -117,6 +105,8 @@ const About = () => {
                                 setTimeout(() => setCopied(false), 1000);
                             }}
                             ref={gmailButtonRef}
+                            onMouseEnter={handleGmailEnter}
+                            onMouseLeave={handleGmailLeave}
                             className="relative bg-[#323232] py-5 px-8 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                         >
                             <FaEnvelope size={30} />
@@ -158,6 +148,8 @@ const About = () => {
                             {link.icon} {link.label}
                         </a>
                     ))}
+
+                    {/* Gmail Button with Fixed Animation */}
                     <button
                         onClick={() => {
                             navigator.clipboard.writeText("yashhbhut15@gmail.com");
