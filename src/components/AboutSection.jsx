@@ -1,72 +1,21 @@
 import GitHubCalendar from 'react-github-calendar';
 import meImg from "/img/me.jpg";
-import { useEffect, useRef, useState } from 'react';
-import gsap from "gsap";
 import { socialLinks } from '../constants';
 import { FaEnvelope } from 'react-icons/fa6';
+import { useState } from 'react';
 
 const About = () => {
-    const socialLinksRef = useRef([]);
-    const gmailButtonRef = useRef(null);
     const [copied, setCopied] = useState(false);
-
-    useEffect(() => {
-        socialLinksRef.current = socialLinksRef.current.filter(el => el); // Remove undefined/null
-    }, []);
-
-    // Hover animation for social links
-    const handleMouseEnter = (index) => {
-        if (socialLinksRef.current[index]) {
-            gsap.to(socialLinksRef.current[index], {
-                scale: 1.15,
-                opacity: 1,
-                boxShadow: "0px 0px 20px rgba(255,255,255,0.15)",
-                duration: 0.2,
-                ease: "power1.out",
-            });
-        }
-    };
-
-    const handleMouseLeave = (index) => {
-        if (socialLinksRef.current[index]) {
-            gsap.to(socialLinksRef.current[index], {
-                scale: 1,
-                opacity: 0.9,
-                boxShadow: "0px 0px 0px rgba(255,255,255,0)",
-                duration: 0.2,
-                ease: "power3.inOut",
-            });
-        }
-    };
-
-    // Hover animation for Gmail button (Fixed)
-    const handleGmailEnter = () => {
-        gsap.to(gmailButtonRef.current, {
-            scale: 1.2,
-            boxShadow: "0px 0px 25px rgba(255, 255, 255, 0.25)",
-            duration: 0.2,
-            ease: "power1.out",
-        });
-    };
-
-    const handleGmailLeave = () => {
-        gsap.to(gmailButtonRef.current, {
-            scale: 1,
-            boxShadow: "0px 0px 0px rgba(255,255,255,0)",
-            duration: 0.2,
-            ease: "power3.inOut",
-        });
-    };
 
     return (
         <section className="bg-[#181818] text-white px-2 md:px-10 lg:px-10 py-10 flex flex-col items-center pt-20 h-full">
             <div className="hidden lg:grid grid-cols-3 gap-5 max-w-6xl w-full">
-                <div className="col-span-1 bg-[#232323] rounded-2xl flex justify-center items-center h-[50vh] transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]">
+                <div className="col-span-1 bg-[#232323] rounded-2xl flex justify-center items-center h-[50vh]">
                     <img src={meImg} alt="Me" className='w-full h-full object-cover rounded-xl' />
                 </div>
                 
                 <div className="col-span-2 space-y-5">
-                    <div className="col-span-2 bg-[#323232] p-5 py-6 rounded-2xl flex flex-col h-[35vh] overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]">
+                    <div className="col-span-2 bg-[#323232] p-5 py-6 rounded-2xl flex flex-col h-[35vh] overflow-hidden hover:bg-[#444444]">
                         <h2 className="text-3xl font-bold mb-3">About Me</h2>
                         <p className="text-gray-300">
                             Hi, I'm a passionate web developer specializing in front-end and back-end technologies.
@@ -79,18 +28,13 @@ const About = () => {
                     </div>
 
                     {/* Social Links */}
-                    <div className="flex justify-center gap-5 mt-8">
+                    <div className="flex justify-center gap-2 mt-8">
                         {socialLinks.map((link, index) => (
                             <a
                                 key={index}
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                ref={(el) => {
-                                    socialLinksRef.current[index] = el;
-                                }}
-                                onMouseEnter={() => handleMouseEnter(index)}
-                                onMouseLeave={() => handleMouseLeave(index)}
                                 className="bg-[#323232] py-5 px-8 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                             >
                                 {link.icon}
@@ -104,9 +48,6 @@ const About = () => {
                                 setCopied(true);
                                 setTimeout(() => setCopied(false), 1000);
                             }}
-                            ref={gmailButtonRef}
-                            onMouseEnter={handleGmailEnter}
-                            onMouseLeave={handleGmailLeave}
                             className="relative bg-[#323232] py-5 px-8 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                         >
                             <FaEnvelope size={30} />
@@ -120,7 +61,7 @@ const About = () => {
                 </div>
 
                 {/* GitHub Contribution Section */}
-                <div className="col-span-3 bg-[#232323] p-3 rounded-2xl flex flex-col items-center h-fit w-full xl:mt-5 xl:mb-4 transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]">
+                <div className="col-span-3 bg-[#232323] p-3 rounded-2xl flex flex-col items-center h-fit w-full xl:mt-5 xl:mb-4">
                     <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
                 </div>
             </div>
@@ -138,11 +79,6 @@ const About = () => {
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            ref={(el) => {
-                                socialLinksRef.current[index + socialLinks.length] = el;
-                            }}
-                            onMouseEnter={() => handleMouseEnter(index + socialLinks.length)}
-                            onMouseLeave={() => handleMouseLeave(index + socialLinks.length)}
                             className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                         >
                             {link.icon} {link.label}
@@ -156,9 +92,6 @@ const About = () => {
                             setCopied(true);
                             setTimeout(() => setCopied(false), 1000);
                         }}
-                        ref={gmailButtonRef}
-                        onMouseEnter={handleGmailEnter}
-                        onMouseLeave={handleGmailLeave}
                         className="relative bg-[#323232] py-5 px-8 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                     >
                         <FaEnvelope size={30} /> Gmail

@@ -78,7 +78,7 @@ export const techStack = [
     { name: "Tailwind CSS", img: "/img/tech/tailwindcss.svg" },
     // Backend Technologies
     { name: "Node.js", img: "/img/tech/nodejs.svg" },
-    { name: "Express.js", img: "/img/tech/expressjs.svg" },
+    { name: "Express.js", img: "/img/tech/expressjs.png" },
     // Databases
     { name: "MongoDB", img: "/img/tech/mongodb.svg" },
     { name: "SQL", img: "/img/tech/sql.svg" },
@@ -104,7 +104,7 @@ export const projects = [
             },
             {
                 name: "Expressjs",
-                img: "/img/tech/expressjs.svg"
+                img: "/img/tech/expressjs.png"
             },
             {
                 name: "React",

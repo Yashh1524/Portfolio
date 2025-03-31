@@ -54,7 +54,7 @@ const TechStacks = () => {
                         onMouseLeave={() => handleMouseLeave(index)}
                         className="bg-[#323232] p-4 rounded-2xl flex flex-col items-center justify-center h-28 transition-transform"
                     >
-                        <img src={tech.img} alt={tech.name} className="w-15 h-15 rounded-xl" />
+                        <img src={tech.img} alt={tech.name} className="w-15 h-15 object-cover rounded-xl" />
                     </div>
                 ))}
             </div>

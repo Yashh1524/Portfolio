@@ -15,7 +15,7 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
         <ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
             {/* Front of Card */}
             <div
-                className="relative flex flex-col h-[85vh] w-[320px] sm:w-[320px] md:w-[450px] bg-[#181818] rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+                className="relative flex flex-col h-[80vh] w-[320px] sm:w-[320px] md:w-[450px] bg-[#181818] rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -77,7 +77,7 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
                 <div className="flex justify-end items-center bg-[#323232] px-4 py-3">
                     <div className="flex gap-2">
                         {techStackUsed.map((tech, index) => (
-                            <div key={index} className="w-12 h-12 hover:bg-[#181818] p-2 rounded-full overflow-hidden">
+                            <div key={index} className="w-12 h-12 p-2 rounded-full overflow-hidden">
                                 <img src={tech.img} alt={tech.name} className="w-full h-full object-cover" />
                             </div>
                         ))}
@@ -86,7 +86,7 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
             </div>
             {/* Back of Card */}
             <div
-                className="relative flex flex-col h-[85vh] w-[320px] sm:w-[320px] md:w-[450px] rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 bg-[#202020] text-white p-6"
+                className="relative flex flex-col h-[80vh] w-[320px] sm:w-[320px] md:w-[450px] rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 bg-[#202020] text-white p-6"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >

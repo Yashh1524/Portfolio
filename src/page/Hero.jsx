@@ -38,19 +38,19 @@ const Hero = () => {
             <div className="w-full text-center z-40">
                 <p
                     ref={nameRef}
-                    className="sm:text-5xl text-xl font-extrabold font-hero-heading bg-gradient-to-r from-[#004556] via-[#0887aa] to-[#97E2C8] bg-clip-text text-transparent sm:text-white"
+                    className="sm:text-6xl text-3xl font-extrabold font-hero-heading bg-gradient-to-r from-[#004556] via-[#0887aa] to-[#97E2C8] bg-clip-text text-transparent sm:text-white"
                 >
                     Hi, I am Yash Bhut <span className="waving-hand">👋</span>
                 </p>
 
                 <p
                     ref={textRef}
-                    className="text-center xl:text-4xl md:text-3xl sm:text-3xl text-2xl font-generalsans font-black bg-gradient-to-r from-[#97E2C8] via-[#d038d5] to-[#004556] bg-clip-text text-transparent"
+                    className="text-center xl:text-5xl md:text-3xl sm:text-2xl text-1xl font-generalsans font-black bg-gradient-to-r from-[#97E2C8] via-[#d038d5] to-[#004556] bg-clip-text text-transparent"
                 >
                     {roles[roleIndex]}
                 </p>
             </div>
-            <RobotCanvas />
+            {/* <RobotCanvas /> */}
         </section>
     );
 };

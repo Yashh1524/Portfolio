@@ -37,10 +37,10 @@ const RocketCanvas = () => {
 
     return (
         <div className="absolute right-0 w-[90vw] h-[60vh] -z-10 flex">
-            <div className="w-2/3 ">
+            <div className="w-full lg:w-2/3 ">
                 
             </div>
-            <div className="w-1/3 h-full">
+            <div className="w-full lg:w-1/3 h-full">
                 <Canvas>
                     <ambientLight />
                     <OrbitControls
