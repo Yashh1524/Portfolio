@@ -20,16 +20,16 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <div className="flex justify-end gap-4 bg-[#323232] px-3 py-2">
-                    <a href={repoLink} className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
+                    <a href={repoLink} target='blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
                         <FaGithub size={24} />
                     </a>
                     {liveLink && (
-                        <a href={liveLink} className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
+                        <a href={liveLink} target='blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
                             <FaLink size={24} />
                         </a>
                     )}
                     {ytLink && (
-                        <a href={ytLink} className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
+                        <a href={ytLink} target='blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
                             <FaYoutube size={24} />
                         </a>
                     )}

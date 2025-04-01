@@ -63,7 +63,9 @@ const Contact = () => {
             <StarsCanvas />
             
             <div ref={formRef} className="absolute inset-0 flex flex-col items-center justify-center text-white px-6">
-                <RocketCanvas />
+                <div className='hidden lg:block'>
+                    <RocketCanvas />
+                </div>
                 <h2 className="text-4xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Let's Talk
                 </h2>
