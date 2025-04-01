@@ -48,7 +48,7 @@ const About = () => {
                 </div>
 
                 <div className="h-dvh" id="clip">
-                    <div className="mask-clip-path absolute left-1/2 top-0 z-10 h-[60vh] lg:h-[45vh] w-60 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[40vw] lg:w-[30vw]">
+                    <div className="mask-clip-path absolute left-1/2 top-0 z-10 h-[45vh] lg:h-[45vh] w-60 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[40vw] lg:w-[30vw]">
                         <div className="mask-clip-path absolute left-0 top-0 size-full">
                             <AboutSection />
                         </div>
