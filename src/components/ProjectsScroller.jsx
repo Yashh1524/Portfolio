@@ -37,8 +37,29 @@ function ProjectsScroller() {
     }, []);
 
     return (
-        <div ref={triggerRef} className="overflow-hidden">
-            <div ref={sectionRef} className="relative flex w-[450vw] lg:w-fit h-screen items-center space-x-10 mt-10 pr-30 lg:pr-50 lg:pl-20">
+        <>
+            <div ref={triggerRef} className="hidden lg:block overflow-hidden">
+                <div ref={sectionRef} className="relative flex w-[450vw] lg:w-fit h-screen items-center space-x-10 mt-10 pr-30 lg:pr-50 lg:pl-20">
+                    {
+                        projects.map((project, index) => (
+                            <ProjectCard 
+                                key={index}
+                                title={project?.title}
+                                description={project?.description}
+                                fullDescription={project?.fullDescription}
+                                repoLink={project?.repoLink} 
+                                liveLink={project?.liveLink}
+                                ytLink={project?.ytLink}
+                                image={project?.image}
+                                video={project?.video}
+                                techStackUsed={project?.techStackUsed}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+            <div className="lg:hidden flex flex-col items-center justify-center px-3 gap-3 md:flex-row md:flex-wrap md:justify-center">
+
                 {
                     projects.map((project, index) => (
                         <ProjectCard 
@@ -54,9 +75,10 @@ function ProjectsScroller() {
                             techStackUsed={project?.techStackUsed}
                         />
                     ))
-                }
+                }   
             </div>
-        </div>
+
+        </>
     );
 }
 

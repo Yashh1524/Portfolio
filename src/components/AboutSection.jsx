@@ -68,18 +68,18 @@ const About = () => {
 
             {/* Mobile Layout */}
             <div className="lg:hidden flex flex-col gap-5 w-full max-w-6xl">
-                <div className="bg-[#232323] rounded-2xl flex justify-center items-center h-[38vh] transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]">
+                <div className="bg-[#232323] rounded-2xl flex justify-center items-center h-[35vh] transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]">
                     <img src={meImg} alt="Me" className="w-full h-full object-contain md:object-contain rounded-xl" />
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 w-full py-10">
+                <div className="grid grid-cols-1 gap-2 w-full py-1">
                     {socialLinks.map((link, index) => (
                         <a
                             key={index}
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#323232] p-5 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
+                            className="bg-[#323232] px-5 py-2 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                         >
                             {link.icon} {link.label}
                         </a>
@@ -92,7 +92,7 @@ const About = () => {
                             setCopied(true);
                             setTimeout(() => setCopied(false), 1000);
                         }}
-                        className="relative bg-[#323232] py-5 px-8 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
+                        className="relative bg-[#323232] px-5 py-2 rounded-xl flex items-center gap-3 text-white text-lg hover:bg-[#444444] transition"
                     >
                         <FaEnvelope size={30} /> Gmail
                         {copied && (
