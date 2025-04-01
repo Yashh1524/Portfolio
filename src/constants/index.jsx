@@ -204,4 +204,24 @@ export const projects = [
             },
         ]
     },
+    {
+        title: "Notes App",
+        description: "A React and TypeScript-based Notes app that allows users to create, tag, and search notes locally for fast access.",  
+        fullDescription: "This lightweight Notes app, built with React and TypeScript, enables users to create and manage notes with multiple tags. Featuring a robust search function, it allows quick retrieval by title or tags while storing all data locally for seamless and offline use.",
+        repoLink: "https://github.com/YashBhut1524/Advance-Notes-TypeScript-React",
+        liveLink: "https://advance-note-app-typescript-react.netlify.app/",
+        ytLink: "",
+        image: "/img/projectImg/note.png",
+        video: "",
+        techStackUsed: [
+            {
+                name: "TypeScript",
+                img: "/img/tech/ts.svg"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+        ]
+    },
 ]

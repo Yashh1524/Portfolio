@@ -1,12 +1,55 @@
-# React + Vite
+# Portfolio Website - [yashh1524.com](https://yashh1524.com)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This site showcases my work, skills, and projects as a web developer. Built with modern technologies, it features an interactive design and smooth animations to enhance the user experience.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[Visit My Portfolio](https://yashh1524.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
+- ✨ Fully responsive design
+- 🎨 Clean and modern UI/UX
+- 🚀 Animations with GSAP
+- 🌟 Dynamic GitHub contribution graph
+- 📬 Contact form integration with Web3Forms
+- 🌠 Custom background animations and 3D models with Three.js
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
+- **Frontend**: React.js, Tailwind CSS
+- **Animations**: GSAP, Three.js, Threejs Fiber
+- **Forms**: Web3Forms API
+- **Icons**: React Icons
+- **Version Control**: Git & GitHub
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Installation & Setup
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/YOUR_GITHUB_USERNAME/your-portfolio-repo.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd your-portfolio-repo
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Create a `.env` file and add your Web3Forms API key:
+   ```
+   VITE_WEB3_FORM_KEY=your_web3forms_key_here
+   ```
+5. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## 📬 Contact
+Feel free to connect with me:
+- **Portfolio**: [yashh1524.com](https://yashh1524.com)
+- **GitHub**: [github.com/YashBhut1524](https://github.com/YashBhut1524)
+- **Email**: yashhbhut15@gmail.com
+
+If you like my portfolio, consider giving it a ⭐ on GitHub!
+
+---
