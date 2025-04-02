@@ -69,8 +69,6 @@ export const techStack = [
     // Programming Languages
     { name: "JavaScript", img: "/img/tech/js.svg" },
     { name: "TypeScript", img: "/img/tech/ts.svg" },
-    { name: "Java", img: "/img/tech/java.svg" },
-    { name: "C", img: "/img/tech/c.svg" },
     { name: "Python", img: "/img/tech/py.svg" },
     // Frontend Technologies
     { name: "React", img: "/img/tech/react.svg" },
@@ -80,9 +78,11 @@ export const techStack = [
     { name: "Node.js", img: "/img/tech/nodejs.svg" },
     { name: "Express.js", img: "/img/tech/expressjs.png" },
     // Databases
+    { name: "Prisma", img: "/img/tech/prisma.svg" },
     { name: "MongoDB", img: "/img/tech/mongodb.svg" },
     { name: "SQL", img: "/img/tech/sql.svg" },
     { name: "Firebase", img: "/img/tech/firebase.svg" },
+    { name: "Postgresql", img: "/img/tech/postgresql.svg" },
     // Other Tools
     { name: "Git", img: "/img/tech/git.svg" },
 ];

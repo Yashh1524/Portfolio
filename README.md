@@ -1,55 +1,44 @@
-# Portfolio Website - [yashh1524.com](https://yashh1524.com)
+# Portfolio Website
 
-Welcome to my personal portfolio website! This site showcases my work, skills, and projects as a web developer. Built with modern technologies, it features an interactive design and smooth animations to enhance the user experience.
+This is the repository for my personal portfolio website, built using **React.js**. It showcases my projects, skills, and experiences. You can visit the live version of the portfolio here: **[My Portfolio](https://www.yashh1524.com/)**
 
-## 🚀 Live Demo
-[Visit My Portfolio](https://yashh1524.com)
+## 🚀 Features
+- **Modern UI/UX** with smooth animations
+- **Responsive Design** for mobile, tablet, and desktop
+- **Project Showcase** with live links, GitHub repositories, and videos
+- **Tech Stack Icons** for every project
+- **GSAP Animations** for smooth scrolling experience
 
-## 📌 Features
-- ✨ Fully responsive design
-- 🎨 Clean and modern UI/UX
-- 🚀 Animations with GSAP
-- 🌟 Dynamic GitHub contribution graph
-- 📬 Contact form integration with Web3Forms
-- 🌠 Custom background animations and 3D models with Three.js
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Tailwind CSS, Vite
+- **3D & Animations:** GSAP, React Three Fiber, Drei, GSAP ScrollTrigger
+- **UI Components & Icons:** React Icons, React Card Flip
+- **Utilities:** React Responsive, React GitHub Calendar
+- **Build Tools & Linting:** ESLint, Vite, @vitejs/plugin-react
 
-## 🛠️ Technologies Used
-- **Frontend**: React.js, Tailwind CSS
-- **Animations**: GSAP, Three.js, Threejs Fiber
-- **Forms**: Web3Forms API
-- **Icons**: React Icons
-- **Version Control**: Git & GitHub
-
-## 📂 Installation & Setup
+## 📦 Installation
 To run this project locally, follow these steps:
 
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/your-portfolio-repo.git
+   ```bash
+   git clone https://github.com/YashBhut1524/3D-Portfolio
    ```
-2. Navigate to the project folder:
-   ```sh
-   cd your-portfolio-repo
+2. Navigate to the project directory:
+   ```bash
+   cd 3D-Portfolio
    ```
 3. Install dependencies:
-   ```sh
+   ```bash
    npm install
    ```
-4. Create a `.env` file and add your Web3Forms API key:
-   ```
-   VITE_WEB3_FORM_KEY=your_web3forms_key_here
-   ```
-5. Start the development server:
-   ```sh
+   > If you encounter any dependency issues, try running:
+   > ```bash
+   > npm install --force
+   > ```
+4. Start the development server:
+   ```bash
    npm run dev
    ```
 
-## 📬 Contact
-Feel free to connect with me:
-- **Portfolio**: [yashh1524.com](https://yashh1524.com)
-- **GitHub**: [github.com/YashBhut1524](https://github.com/YashBhut1524)
-- **Email**: yashhbhut15@gmail.com
-
-If you like my portfolio, consider giving it a ⭐ on GitHub!
-
 ---
+Feel free to fork this repo and modify it for your own use!
