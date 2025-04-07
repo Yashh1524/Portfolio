@@ -44,7 +44,7 @@ export const socialLinks = [
         label: "Github"
     },
     {
-        href: "https://www.instagram.com/yashh_1524/",
+        href: "https://www.instagram.com/dev.yashh1524/",
         icon: <FaInstagram size={30} />,
         label: "Instagram"
     },
