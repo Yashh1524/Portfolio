@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaEnvelope, FaYoutube  } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaEnvelope, FaYoutube } from "react-icons/fa6";
 
 export const roles = [
     "Building Seamless Web Apps",
@@ -88,6 +88,44 @@ export const techStack = [
 ];
 
 export const projects = [
+    {
+        title: "GiveWithTrust",
+        description: "A proof-based donation platform where NGOs receive funds only after verified work submission, with donor-controlled fund redirection.",
+        fullDescription: "GiveWithTrust is a transparent donation platform where NGOs get funds only after submitting monthly proof of work. If they miss deadlines, donors can vote to redirect the funds to more accountable NGOs. Built with modern tech like Next.js, Prisma, and Gemini AI, it promotes trust and measurable impact.",
+        liveLink: "https://give-with-trust.vercel.app/",
+        ytLink: "https://www.youtube.com/watch?v=o9hRJNVbHgs",
+        image: "/img/projectImg/give-with-trust.png",
+        techStackUsed: [
+            {
+                name: "Next.js",
+                img: "/img/tech/nextjs.svg"
+            },
+            {
+                name: "TypeScript",
+                img: "/img/tech/ts.svg"
+            },
+            {
+                name: "Prisma",
+                img: "/img/tech/prisma.svg"
+            },
+            {
+                name: "PostgreSQL (Neon)",
+                img: "/img/tech/postgresql.svg"
+            },
+            {
+                name: "Clerk",
+                img: "/img/tech/clerk.svg"
+            },
+            {
+                name: "Razorpay",
+                img: "/img/tech/razorpay.png"
+            },
+            {
+                name: "Gemini AI",
+                img: "/img/tech/gemini.svg"
+            }
+        ]
+    },
     {
         title: "BlinkIt-Clone",
         description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
@@ -206,7 +244,7 @@ export const projects = [
     },
     {
         title: "Notes App",
-        description: "A React and TypeScript-based Notes app that allows users to create, tag, and search notes locally for fast access.",  
+        description: "A React and TypeScript-based Notes app that allows users to create, tag, and search notes locally for fast access.",
         fullDescription: "This lightweight Notes app, built with React and TypeScript, enables users to create and manage notes with multiple tags. Featuring a robust search function, it allows quick retrieval by title or tags while storing all data locally for seamless and offline use.",
         repoLink: "https://github.com/YashBhut1524/Advance-Notes-TypeScript-React",
         liveLink: "https://advance-note-app-typescript-react.netlify.app/",

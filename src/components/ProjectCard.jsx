@@ -18,10 +18,15 @@ const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, vi
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
+                {/* Links */}
                 <div className="flex justify-end gap-4 bg-[#323232] px-3 py-2">
-                    <a href={repoLink} target='_blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
-                        <FaGithub size={24} />
-                    </a>
+                    {
+                        repoLink && (
+                            <a href={repoLink} target='_blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
+                                <FaGithub size={24} />
+                            </a>
+                        )
+                    }
                     {liveLink && (
                         <a href={liveLink} target='_blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
                             <FaLink size={24} />
