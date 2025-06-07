@@ -13,7 +13,6 @@ export const roles = [
     "Turning Ideas into Scalable Solutions"
 ];
 
-
 export const navLinks = [
     {
         id: 1,
@@ -160,6 +159,36 @@ export const projects = [
                 name: "Razorpay",
                 img: "/img/tech/razorpay.png"
             },
+        ]
+    },
+    {
+        title: "GamBles",
+        description: "A secure online casino platform inspired by Stake, featuring real-time games with full-stack MERN architecture and anti-cheat mechanisms.",
+        fullDescription: "GamBles is a Stake-inspired online casino platform developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It includes robust anti-cheat logic to ensure fair gameplay and game integrity. The platform currently supports two games with plans for expansion. Emphasis was placed on real-time responsiveness, a smooth user interface, and covering edge cases for seamless gameplay.",
+        repoLink: "https://github.com/YashBhut1524/Gambles",
+        liveLink: "https://gambles-gilt.vercel.app/",
+        image: "/img/projectImg/gambles.jpg",
+        techStackUsed: [
+            {
+                name: "MongoDB",
+                img: "/img/tech/mongodb.svg"
+            },
+            {
+                name: "Expressjs",
+                img: "/img/tech/expressjs.png"
+            },
+            {
+                name: "React",
+                img: "/img/tech/react.svg"
+            },
+            {
+                name: "Nodejs",
+                img: "/img/tech/nodejs.svg"
+            },
+            {
+                name: "TailwindCSS",
+                img: "/img/tech/tailwindcss.svg"
+            }
         ]
     },
     {
