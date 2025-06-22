@@ -91,6 +91,7 @@ export const projects = [
         title: "GiveWithTrust",
         description: "A proof-based donation platform where NGOs receive funds only after verified work submission, with donor-controlled fund redirection.",
         fullDescription: "GiveWithTrust is a transparent donation platform where NGOs get funds only after submitting monthly proof of work. If they miss deadlines, donors can vote to redirect the funds to more accountable NGOs. Built with modern tech like Next.js, Prisma, and Gemini AI, it promotes trust and measurable impact.",
+        repoLink: "https://github.com/YashBhut1524/Give-With-Trust",
         liveLink: "https://give-with-trust.vercel.app/",
         ytLink: "https://www.youtube.com/watch?v=o9hRJNVbHgs",
         image: "/img/projectImg/give-with-trust.png",
@@ -167,6 +168,7 @@ export const projects = [
         fullDescription: "GamBles is a Stake-inspired online casino platform developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It includes robust anti-cheat logic to ensure fair gameplay and game integrity. The platform currently supports two games with plans for expansion. Emphasis was placed on real-time responsiveness, a smooth user interface, and covering edge cases for seamless gameplay.",
         repoLink: "https://github.com/YashBhut1524/Gambles",
         liveLink: "https://gambles-gilt.vercel.app/",
+        ytLink: "https://www.youtube.com/watch?v=KF0jBhC7FsM&feature=youtu.beuZkDM8ZYMFY",
         image: "/img/projectImg/gambles.jpg",
         techStackUsed: [
             {
@@ -189,6 +191,26 @@ export const projects = [
                 name: "TailwindCSS",
                 img: "/img/tech/tailwindcss.svg"
             }
+        ]
+    },
+    {
+        title: "OCR TOOL",
+        description: "An OCR tool built with Python and pytesseract that extracts text from images via a custom snipping tool or image upload.",
+        fullDescription: "This OCR (Optical Character Recognition) tool, built with Python and pytesseract, allows users to extract text from images efficiently. It offers two methods for text extraction: a custom snipping tool that lets users capture a specific area of the screen and an option to upload an image from their device. With a simple and user-friendly approach, this tool makes text recognition from images quick and convenient.",
+        repoLink: "https://github.com/YashBhut1524/OCR-Tool-App-using-PyTesseract",
+        liveLink: "",
+        ytLink: "https://www.youtube.com/watch?v=uTJTmOiS8ws",
+        image: "/img/projectImg/ocr.png",
+        video: "/video/ocr.mp4",
+        techStackUsed: [
+            {
+                name: "Python",
+                img: "/img/tech/py.svg"
+            },
+            {
+                name: "Tesseract",
+                img: "/img/tech/ocr.png"
+            },
         ]
     },
     {
@@ -220,26 +242,6 @@ export const projects = [
             {
                 name: "Oauth",
                 img: "/img/tech/oauth.svg"
-            },
-        ]
-    },
-    {
-        title: "OCR TOOL",
-        description: "An OCR tool built with Python and pytesseract that extracts text from images via a custom snipping tool or image upload.",
-        fullDescription: "This OCR (Optical Character Recognition) tool, built with Python and pytesseract, allows users to extract text from images efficiently. It offers two methods for text extraction: a custom snipping tool that lets users capture a specific area of the screen and an option to upload an image from their device. With a simple and user-friendly approach, this tool makes text recognition from images quick and convenient.",
-        repoLink: "https://github.com/YashBhut1524/OCR-Tool-App-using-PyTesseract",
-        liveLink: "",
-        ytLink: "https://www.youtube.com/watch?v=uTJTmOiS8ws",
-        image: "/img/projectImg/ocr.png",
-        video: "/video/ocr.mp4",
-        techStackUsed: [
-            {
-                name: "Python",
-                img: "/img/tech/py.svg"
-            },
-            {
-                name: "Tesseract",
-                img: "/img/tech/ocr.png"
             },
         ]
     },
