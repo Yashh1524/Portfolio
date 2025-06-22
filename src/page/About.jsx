@@ -4,10 +4,9 @@ import { ScrollTrigger } from "gsap/all";
 import { 
     AboutInfoForSmMD,
     AboutSection, 
-    RocketCanvas,
     TechStacks,
 } from "../components";
-import { useState } from "react";
+// import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +52,6 @@ const About = () => {
                             <AboutSection />
                         </div>
                     </div>
-                    <RocketCanvas />
                 </div>
                 <div>
                     <AboutInfoForSmMD />

@@ -1,31 +1,27 @@
-import { useState, useEffect } from "react";
 import { About, Contact, Projects } from "./page";
-import { Head, Loader, StarsCanvas } from "./components";
-import { useProgress } from "@react-three/drei";
+import { Head } from "./components";
+import { cn } from "./lib/utils";
+import { DotPattern } from "./components/magicui/dot-pattern";
 
 function App() {
-  const { progress } = useProgress();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (progress === 100) {
-      setLoading(false);
-    }
-  }, [progress]);
 
   return (
     <main>
-      {loading ? (
-        <Loader progress={progress} /> // Pass progress to show %
-      ) : (
-        <div className="relative overflow-y-hidden">
-          <StarsCanvas />
+      <div className="relative overflow-y-hidden">
+        <div className="relative flex h-[100vh] w-full flex-col items-center justify-center overflow-hidden bg-black">
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
+            )}
+            width={22}
+            height={20}
+          />
           <Head />
-          <About />
-          <Projects />
-          <Contact />
         </div>
-      )}
+        <About />
+        <Projects />
+        <Contact />
+      </div>
     </main>
   );
 }

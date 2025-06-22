@@ -1,7 +1,6 @@
 import React from 'react'
 import { Hero, Navbar } from '../page'
-import Button from './Button'
-import StarsCanvas from './canvas/StarsCanvas'
+import { Button } from '.'
 
 const Head = () => {
     return (
@@ -13,7 +12,6 @@ const Head = () => {
                 <Button name="Let's work together" isBeam containerClass="sm:w-fit sm:min-w-50 bg-[#2c2c2c] text-white rounded-md px-10 cursor-pointer" />
                 </a>
             </div>
-            <StarsCanvas />
         </div>
     )
 }

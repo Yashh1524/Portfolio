@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
-import { RobotCanvas } from "../components";
 import { roles } from "../constants";
 
 const Hero = () => {
@@ -50,7 +49,6 @@ const Hero = () => {
                     {roles[roleIndex]}
                 </p>
             </div>
-            {/* <RobotCanvas /> */}
         </section>
     );
 };

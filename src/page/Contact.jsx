@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { RocketCanvas, StarsCanvas } from '../components';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { RetroGrid } from '@/components/magicui/retro-grid';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -59,62 +59,61 @@ const Contact = () => {
     };
 
     return (
-        <section id='contact' ref={triggerRef} className="relative flex items-center justify-center min-h-[90vh] overflow-hidden mt-30">
-            <StarsCanvas />
-            
+        <section id='contact' ref={triggerRef} className="relative flex items-center justify-center min-h-[90vh] overflow-hidden mt-30 z-100">
             <div ref={formRef} className="absolute inset-0 flex flex-col items-center justify-center text-white px-6">
-                <div className='hidden lg:block'>
-                    <RocketCanvas />
-                </div>
-                <h2 className="text-4xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Let's Talk
-                </h2>
-                <form 
-                    onSubmit={handleSubmit} 
-                    className="w-full max-w-lg bg-white/10 p-8 rounded-2xl shadow-xl border border-white/20"
-                >
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-                    
-                    <div className="mb-4">
-                        <label className="block text-gray-300 text-sm mb-2">Name</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-300 text-sm mb-2">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
-                            required
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label className="block text-gray-300 text-sm mb-2">Message</label>
-                        <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-white/20 text-white rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
-                            required
-                        ></textarea>
-                    </div>
-                    <button
-                        type="submit"
-                        className="w-full p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-pink-500/50 transition-transform transform hover:scale-105"
+                <RetroGrid
+                />
+                <div className='w-full flex flex-col items-center justify-center'>
+                    <h2 className="text-4xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Let's Talk
+                    </h2>
+                    <form
+                        onSubmit={handleSubmit}
+                        className="w-full max-w-lg bg-white/10 p-8 rounded-2xl shadow-xl border border-white/20"
                     >
-                        Send Message
-                    </button>
-                </form>
-                {result && <p className="mt-4 text-gray-300">{result}</p>}
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
+                        <div className="mb-4">
+                            <label className="block text-gray-300 text-sm mb-2">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-300 text-sm mb-2">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+                                required
+                            />
+                        </div>
+                        <div className="mb-6">
+                            <label className="block text-gray-300 text-sm mb-2">Message</label>
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-white/20 text-white rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+                                required
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            className="w-full p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-pink-500/50 transition-transform transform hover:scale-105"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                    {result && <p className="mt-4 text-gray-300">{result}</p>}
+                </div>
             </div>
         </section>
     );
