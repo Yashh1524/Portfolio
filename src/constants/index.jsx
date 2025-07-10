@@ -246,34 +246,6 @@ export const projects = [
         ]
     },
     {
-        title: "Pitch Here",
-        description: "A Next.js 15 app featuring Partial Prerendering, Parallel Fetching, GitHub OAuth, Sanity CMS, and Cloudinary for media management.",
-        fullDescription: "PitchHere is a modern web application built with Next.js 15, utilizing advanced features like Partial Prerendering (PPR) and Parallel Fetching to enhance performance. It includes GitHub OAuth authentication for seamless login, Sanity CMS for dynamic content management, and Cloudinary for efficient media handling, making it a powerful platform for content-driven applications.",
-        repoLink: "https://github.com/YashBhut1524/PitchHere",
-        liveLink: "https://pitch-here.vercel.app/",
-        ytLink: "",
-        image: "/img/projectImg/pitchHere.png",
-        video: "",
-        techStackUsed: [
-            {
-                name: "Nextjs",
-                img: "/img/tech/nextjs.svg"
-            },
-            {
-                name: "React",
-                img: "/img/tech/react.svg"
-            },
-            {
-                name: "Sanity",
-                img: "/img/tech/sanity.svg"
-            },
-            {
-                name: "Oauth",
-                img: "/img/tech/oauth.svg"
-            },
-        ]
-    },
-    {
         title: "Notes App",
         description: "A React and TypeScript-based Notes app that allows users to create, tag, and search notes locally for fast access.",
         fullDescription: "This lightweight Notes app, built with React and TypeScript, enables users to create and manage notes with multiple tags. Featuring a robust search function, it allows quick retrieval by title or tags while storing all data locally for seamless and offline use.",
