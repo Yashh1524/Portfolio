@@ -45,16 +45,16 @@ const TechStacks = () => {
         <div 
             className="scroll-container bg-[#181818] text-white flex flex-col items-center h-full w-[83%] pb-10">
             {/* Tech Stack Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 lg:grid-cols-7 gap-5 mt-5 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-11 lg:grid-cols-11 gap-5 mt-5 w-full">
                 {techStack.map((tech, index) => (
                     <div
                         key={index}
                         ref={(el) => (cardsRef.current[index] = el)}
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={() => handleMouseLeave(index)}
-                        className="bg-[#323232] p-4 rounded-2xl flex flex-col items-center justify-center h-28 transition-transform"
+                        className="bg-[#323232] p-4 rounded-2xl flex flex-col items-center justify-center h-25 transition-transform"
                     >
-                        <img src={tech.img} alt={tech.name} className="w-15 h-15 object-cover rounded-xl" />
+                        <img src={tech.img} alt={tech.name} className="w-12 h-12 object-cover rounded-lg"/>
                     </div>
                 ))}
             </div>
