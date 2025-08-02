@@ -1,29 +1,34 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ProjectsScroller } from "../components";
-
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../constants";
 
 function Projects() {
-
-    const textRef = useRef(null);
-
-    useEffect(() => {
-        gsap.fromTo(textRef.current, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 3, ease: "power2.out" });
-    }, []);
-
     return (
-        <section id="projects">
-            <div className="relative flex flex-col items-center space-x-10 pr-10 mt-10">
-                <h1
-                    className="font-general text-[1.5rem] uppercase md:text-[4rem] py-10 "
-                    ref={textRef}
-                >
-                    <span className="font-hero-heading bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Code in Action </span><span>🎯</span>
+        <section id="projects" className="mt-20">
+            <div className="relative flex flex-col items-center mt-10">
+                <h1 className="font-general text-[1.5rem] uppercase md:text-[4rem] py-10">
+                    <span className="font-hero-heading bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Code in Action
+                    </span>{" "}
+                    <span>🎯</span>
                 </h1>
             </div>
-            <ProjectsScroller />
+            <div className="flex flex-col items-center justify-center px-3 gap-6 md:flex-wrap md:justify-center mt-20">
+                {projects.map((project, index) => (
+                    <ProjectCard
+                        key={index}
+                        title={project?.title}
+                        description={project?.description}
+                        fullDescription={project?.fullDescription}
+                        repoLink={project?.repoLink}
+                        liveLink={project?.liveLink}
+                        ytLink={project?.ytLink}
+                        image={project?.image}
+                        video={project?.video}
+                        techStackUsed={project?.techStackUsed}
+                    />
+                ))}
+            </div>
         </section>
     );
 }

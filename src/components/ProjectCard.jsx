@@ -1,92 +1,141 @@
 import React, { useState } from 'react';
-import { FaGithub, FaLink, FaYoutube, FaArrowLeft } from 'react-icons/fa6';
 import ReactCardFlip from 'react-card-flip';
+import { FaGithub, FaYoutube } from 'react-icons/fa6';
+import { FiExternalLink } from "react-icons/fi";
 
-const ProjectCard = ({ title, description, repoLink, liveLink, ytLink, image, video, techStackUsed, fullDescription }) => {
+const ProjectCard = ({
+    title,
+    description,
+    repoLink,
+    liveLink,
+    ytLink,
+    image,
+    video,
+    techStackUsed,
+    fullDescription,
+}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isFlipped, setIsFlipped] = useState(false);
 
-    const handleClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
     return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
-            {/* Front of Card */}
-            <div
-                className="relative flex flex-col h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-[80vh] w-[300px] md:w-[350px] lg:w-[400px] bg-[#181818] rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                {/* Links */}
-                <div className="flex justify-end gap-4 bg-[#323232] px-3 py-2">
-                    {
-                        repoLink && (
-                            <a href={repoLink} target='_blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
-                                <FaGithub size={24} />
-                            </a>
-                        )
-                    }
-                    {liveLink && (
-                        <a href={liveLink} target='_blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
-                            <FaLink size={24} />
-                        </a>
-                    )}
-                    {ytLink && (
-                        <a href={ytLink} target='_blank' className="text-gray-300 hover:text-white transition rounded-full p-2 hover:bg-[#181818]">
-                            <FaYoutube size={24} />
-                        </a>
-                    )}
+        <div className="w-full max-w-5xl mx-auto">
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                
+                {/* FRONT SIDE */}
+                <div
+                    className="flex flex-col lg:flex-row bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 w-full h-[450px]"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    {/* Left Image/Video */}
+                    <div className="relative w-full lg:w-1/2 h-full">
+                        <img
+                            src={image}
+                            alt={title}
+                            className={`object-cover w-full h-full transition-opacity duration-300 ${isHovered && video ? 'opacity-0' : 'opacity-100'}`}
+                        />
+                        {video && (
+                            <video
+                                src={video}
+                                autoPlay
+                                loop
+                                muted
+                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                            />
+                        )}
+                    </div>
+
+                    {/* Right Text */}
+                    <div className="flex flex-col justify-between bg-[#181818] text-white p-6 md:p-10 w-full lg:w-1/2 h-full">
+                        <div>
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4">{title}</h2>
+                            <p className="text-gray-300 mb-6 text-sm md:text-base">{description}</p>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                {techStackUsed.map((tech, index) => (
+                                    <span
+                                        key={index}
+                                        className="bg-[#282828] text-gray-300 text-xs md:text-sm px-3 py-1 rounded-full"
+                                    >
+                                        {tech.name}
+                                    </span>
+                                ))}
+                            </div>
+                            <div className="flex gap-4 mt-4">
+                                {liveLink && (
+                                    <a
+                                        href={liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-purple-400 hover:text-purple-300 transition flex items-center gap-1"
+                                    >
+                                        <FiExternalLink /> Live
+                                    </a>
+                                )}
+                                {repoLink && (
+                                    <a
+                                        href={repoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-300 hover:text-white transition flex items-center gap-1"
+                                    >
+                                        <FaGithub /> GitHub
+                                    </a>
+                                )}
+                                {ytLink && (
+                                    <a
+                                        href={ytLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-red-500 hover:text-red-400 transition flex items-center gap-1"
+                                    >
+                                        <FaYoutube /> Demo
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="mt-6 flex justify-end">
+                            <button
+                                onClick={() => setIsFlipped(true)}
+                                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg shadow-lg transition"
+                            >
+                                More Info
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div className="relative h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[35vh]">
-                    <img src={image} alt={title} className='object-cover h-full w-full transition-opacity duration-300' style={{ opacity: isHovered && video ? 0 : 1 }} />
-                    {video && (
-                        <video src={video} autoPlay loop muted className="absolute inset-0 object-cover h-full w-full transition-opacity duration-300" style={{ opacity: isHovered ? 1 : 0 }} />
-                    )}
-                </div>
-                <div className="p-5 flex flex-col flex-grow">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">{title}</h3>
-                    <p className="text-gray-300 text-sm sm:text-base md:text-lg flex-grow">{description}
-                        <button onClick={handleClick} className="ml-2 bg-[#323232] text-white px-2 py-1 rounded-md hover:bg-[#252525] transition text-xs sm:text-sm">
-                            Read More
-                        </button>
-                    </p>
-                </div>
-                <div className="flex justify-end items-center bg-[#323232] px-4 py-3">
-                    <div className="flex gap-2">
+
+                {/* BACK SIDE */}
+                <div className="flex flex-col bg-[#181818] text-white p-6 md:p-10 rounded-2xl w-full justify-between shadow-xl relative h-[550px] overflow-y-auto">
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-4">{title} - Details</h2>
+                        <p className="text-gray-300 mb-6 text-sm md:text-base whitespace-pre-line">
+                            {fullDescription}
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-4 mb-6">
                         {techStackUsed.map((tech, index) => (
-                            <div key={index} className="w-10 h-10 lg:w-12 lg:h-12 p-2 rounded-full overflow-hidden">
-                                <img src={tech.img} alt={tech.name} className="w-full h-full object-cover" />
+                            <div key={index} className="flex items-center gap-2 bg-[#282828] p-3 rounded-2xl select-none">
+                                <img
+                                    src={tech.img}
+                                    alt={tech.name}
+                                    className="w-10 h-10 object-contain"
+                                />
+                                <span className="text-gray-300 text-sm hidden md:block">{tech.name}</span>
                             </div>
                         ))}
                     </div>
+                    <div className="mt-6 flex justify-end">
+                        <button
+                            onClick={() => setIsFlipped(false)}
+                            className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg shadow-lg transition"
+                        >
+                            Back
+                        </button>
+                    </div>
                 </div>
-            </div>
-
-            {/* Back of Card */}
-            <div
-                className="relative flex flex-col h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-[80vh] w-[300px] md:w-[350px] lg:w-[400px] bg-[#202020] rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 text-white p-6"
-            >
-                <button onClick={handleClick} className="absolute top-4 left-4 hover:bg-[#323232] p-2 rounded-full transition">
-                    <FaArrowLeft size={20} />
-                </button>
-                <div className="flex flex-col justify-center items-center mt-10 text-center px-6">
-                    <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                        {fullDescription}
-                    </p>
-                </div>
-                <div className="absolute bottom-10 left-0 right-0 px-6">
-                    <ul className="grid grid-cols-4 md:grid-cols-4 gap-3 justify-center">
-                        {techStackUsed.map((item, index) => (
-                            <li key={index} className="flex flex-col items-center bg-[#282828] px-3 py-2 rounded-lg shadow-md">
-                                <img src={item.img} alt={item.name} className="w-7 h-7 lg:w-10 lg:h-10 object-contain" />
-                                <p className="text-xs text-gray-400 mt-1 hidden lg:block ">{item.name}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </ReactCardFlip>
+            </ReactCardFlip>
+        </div>
     );
 };
 
