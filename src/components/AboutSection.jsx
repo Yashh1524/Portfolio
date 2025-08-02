@@ -53,7 +53,7 @@ const About = () => {
             {/* GSAP-controlled image for large screens */}
             <div className="about-img-container w-full h-[80vh] overflow-hidden items-center justify-center hidden lg:flex">
                 <img
-                    src="/public/img/me.jpg"
+                    src="/img/me.jpg"
                     alt="Me"
                     className="w-full h-full object-cover"
                 />

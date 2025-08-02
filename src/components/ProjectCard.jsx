@@ -18,12 +18,12 @@ const ProjectCard = ({
     const [isFlipped, setIsFlipped] = useState(false);
 
     return (
-        <div className="w-full max-w-5xl mx-auto">
+        <div className="w-full max-w-5xl mx-auto h-full md:h-[450px]">
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                 
                 {/* FRONT SIDE */}
                 <div
-                    className="flex flex-col lg:flex-row bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 w-full h-[450px]"
+                    className="flex flex-col lg:flex-row bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 w-full"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
@@ -106,7 +106,7 @@ const ProjectCard = ({
                 </div>
 
                 {/* BACK SIDE */}
-                <div className="flex flex-col bg-[#181818] text-white p-6 md:p-10 rounded-2xl w-full justify-between shadow-xl relative h-[550px] overflow-y-auto">
+                <div className="flex flex-col bg-[#181818] text-white p-6 md:p-10 rounded-2xl w-full justify-between shadow-xl relative overflow-y-auto">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">{title} - Details</h2>
                         <p className="text-gray-300 mb-6 text-sm md:text-base whitespace-pre-line">
