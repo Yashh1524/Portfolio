@@ -1,41 +1,61 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
 import { 
     AboutInfoForSmMD,
     AboutSection, 
     TechStacks,
 } from "../components";
-// import { useState } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
 
     useGSAP(() => {
-        const clipAnimation = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#clip",
-                start: "center center",
-                end: "+=800 center",
-                scrub: 0.5,
-                pin: true,
-                pinSpacing: true,
-            },
-        });
-
-        clipAnimation.to(".mask-clip-path", {
-            width: "100vw",
-            height: "100vh",
-            borderRadius: 0,
-        });
+    const startTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#about',
+            start: 'top center',
+        },
+        ease: "power1.inOut"
     });
+
+    startTimeline.to(".about-heading", {
+        opacity: 1,
+        ease: "power1.inOut"
+    });
+
+    const arrowTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#about-section",
+            start: "center top",
+            toggleActions: "play none none reverse",
+        }
+    });
+
+    arrowTimeline.to(".scroll-arrow", { opacity: 0, duration: 0.5, ease: "power1.out" });
+
+    const clipAnimation = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#clip",
+            start: "center center",
+            end: "+=800 center",
+            scrub: 0.5,
+            pin: true,
+            pinSpacing: true,
+        },
+    });
+
+    clipAnimation.to(".mask-clip-path", {
+        width: "100vw",
+        height: "100vh",
+        borderRadius: 0,
+    });
+});
+
 
     return (
         <>
-            <div id="about" data-scroll data-scoll-speed="-0.6" className="min-h-screen w-full relative overflow-y-auto no-scrollbar pb-2">
+            <div id="about" data-scroll data-scroll-speed="-0.6" className="min-h-screen w-full relative overflow-y-auto no-scrollbar pb-2">
                 <div className="relative mb-8 mt-20 flex flex-col items-center gap-5">
-                    <p className="font-hero-heading text-[1.5rem] uppercase md:text-[5rem] bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <p className="about-heading opacity-0 font-hero-heading text-[1.5rem] uppercase md:text-[5rem] bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Know Who I'M
                     </p>
 
@@ -47,18 +67,38 @@ const About = () => {
                 </div>
 
                 <div className="h-dvh" id="clip">
+                    {/* AboutSection with clip mask */}
                     <div className="mask-clip-path absolute left-1/2 top-0 z-10 h-[45vh] lg:h-[45vh] w-60 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[40vw] lg:w-[30vw]">
-                        <div className="mask-clip-path absolute left-0 top-0 size-full">
+                        <div id="about-section" className="mask-clip-path absolute left-0 top-0 size-full">
                             <AboutSection />
                         </div>
                     </div>
+
+                    {/* Scroll Down Arrow on right side of AboutSection, visible only md and above */}
+                    <div className="scroll-arrow hidden md:flex flex-col items-center absolute right-[20%] top-[20%] transform -translate-y-1/2 z-50">
+                        <div className="animate-bounce text-gray-400">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-8 w-8"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <span className="mt-2 text-gray-400 text-sm">Scroll Down</span>
+                    </div>
                 </div>
+
                 <div>
                     <AboutInfoForSmMD />
                 </div>
-                    <div className="w-screen bg-[#181818] flex item-center justify-center">
-                        <TechStacks />  
-                    </div>
+
+                <div className="w-screen bg-[#181818] flex item-center justify-center">
+                    <TechStacks />  
+                </div>
             </div>
         </>
     );

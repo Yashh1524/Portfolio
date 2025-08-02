@@ -58,7 +58,7 @@ function ProjectsScroller() {
                     }
                 </div>
             </div>
-            <div className="lg:hidden flex flex-col items-center justify-center px-3 gap-3 md:flex-row md:flex-wrap md:justify-center">
+            <div className="lg:hidden flex flex-col items-center justify-center px-3 gap-3 md:flex-wrap md:justify-center">
 
                 {
                     projects.map((project, index) => (

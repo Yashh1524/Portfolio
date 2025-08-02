@@ -2,8 +2,12 @@ import { About, Contact, Projects } from "./page";
 import { Head } from "./components";
 import { cn } from "./lib/utils";
 import { DotPattern } from "./components/magicui/dot-pattern";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 function App() {
+  
+  gsap.registerPlugin(ScrollTrigger);
 
   return (
     <main>

@@ -9,7 +9,7 @@ const Hero = () => {
     const nameRef = useRef(null);
 
     useEffect(() => {
-        gsap.fromTo(nameRef.current, { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 2, ease: "power3.out" });
+        gsap.fromTo(nameRef.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 2, ease: "power1.inOut" });
     }, []);
 
     useEffect(() => {
@@ -39,7 +39,7 @@ const Hero = () => {
                     ref={nameRef}
                     className="sm:text-6xl text-3xl font-extrabold font-hero-heading bg-gradient-to-r from-[#004556] via-[#0887aa] to-[#97E2C8] bg-clip-text text-transparent sm:text-white"
                 >
-                    Hi, I am Yash Bhut <span className="waving-hand">👋</span>
+                    Hi, I am Yash Bhut
                 </p>
 
                 <p

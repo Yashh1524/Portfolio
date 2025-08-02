@@ -14,7 +14,7 @@ const TechStacks = () => {
                 y: 0,
                 duration: 0.01,
                 stagger: 0.1,
-                ease: "power1.in",
+                ease: "power1.inOut",
             }
         );
     }, []);
@@ -43,9 +43,9 @@ const TechStacks = () => {
 
     return (
         <div 
-            className="scroll-container bg-[#181818] text-white flex flex-col items-center h-full w-[83%] pb-10">
+            className="scroll-container bg-[#181818] text-white flex flex-col items-center h-full w-[83%] pb-10 my-10 lg:-mt-40">
             {/* Tech Stack Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-11 lg:grid-cols-11 gap-5 mt-5 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-11 gap-5 mt-0 w-full">
                 {techStack.map((tech, index) => (
                     <div
                         key={index}
