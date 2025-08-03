@@ -21,7 +21,7 @@ export const AboutInfoForSmMD = () => {
         
         {/* GitHub Contribution Section */}
         <div className="bg-[#232323] pb-56 p-2 rounded-2xl flex flex-col items-center h-[30vh] sm:h-[30vh] w-full transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#ffffff1a]">
-            <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
+            <GitHubCalendar username="Yashh1524" blockSize={15} fontSize={16} />
         </div>
     </div>
     )

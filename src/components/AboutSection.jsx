@@ -105,7 +105,7 @@ const About = () => {
                 </div>
 
                 <div className="col-span-3 bg-[#232323] p-3 rounded-2xl flex flex-col items-center h-fit w-full xl:mt-5 xl:mb-4">
-                    <GitHubCalendar username="YashBhut1524" blockSize={15} fontSize={16} />
+                    <GitHubCalendar username="Yashh1524" blockSize={15} fontSize={16} />
                 </div>
             </div>
 
