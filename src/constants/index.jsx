@@ -38,7 +38,7 @@ export const navLinks = [
 
 export const socialLinks = [
     {
-        href: "https://github.com/YashBhut1524",
+        href: "https://github.com/Yashh1524",
         icon: <FaGithub size={30} />,
         label: "Github"
     },
@@ -53,7 +53,7 @@ export const socialLinks = [
         label: "X"
     },
     {
-        href: "https://www.linkedin.com/in/yashbhut1524/",
+        href: "https://www.linkedin.com/in/yashh1524/",
         icon: <FaLinkedin size={30} />,
         label: "LinkedIn"
     },
@@ -99,7 +99,7 @@ export const projects = [
         title: "GiveWithTrust",
         description: "A proof-based donation platform where NGOs receive funds only after verified work submission, with donor-controlled fund redirection.",
         fullDescription: "GiveWithTrust is a transparent donation platform where NGOs get funds only after submitting monthly proof of work. If they miss deadlines, donors can vote to redirect the funds to more accountable NGOs. Built with modern tech like Next.js, Prisma, and Gemini AI, it promotes trust and measurable impact.",
-        repoLink: "https://github.com/YashBhut1524/Give-With-Trust",
+        repoLink: "https://github.com/Yashh1524/Give-With-Trust",
         liveLink: "https://give-with-trust.vercel.app/",
         ytLink: "https://www.youtube.com/watch?v=o9hRJNVbHgs",
         image: "/img/projectImg/give-with-trust.png",
@@ -138,7 +138,7 @@ export const projects = [
         title: "GamBles",
         description: "A secure online casino platform inspired by Stake, featuring real-time games with full-stack MERN architecture and anti-cheat mechanisms.",
         fullDescription: "GamBles is a Stake-inspired online casino platform developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It includes robust anti-cheat logic to ensure fair gameplay and game integrity. The platform currently supports two games with plans for expansion. Emphasis was placed on real-time responsiveness, a smooth user interface, and covering edge cases for seamless gameplay.",
-        repoLink: "https://github.com/YashBhut1524/Gambles",
+        repoLink: "https://github.com/Yashh1524/Gambles",
         liveLink: "https://gambles-gilt.vercel.app/",
         ytLink: "https://www.youtube.com/watch?v=KF0jBhC7FsM&feature=youtu.beuZkDM8ZYMFY",
         image: "/img/projectImg/gambles.jpg",
@@ -169,7 +169,7 @@ export const projects = [
         title: "BlinkIt-Clone",
         description: "A BlinkIt clone built with the MERN stack, featuring online grocery browsing, cart management, and secure checkout with integrated payment gateways.",
         fullDescription: "This is a BlinkIt clone built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It is an online grocery ordering and delivery application that allows users to browse products, add them to the cart, and complete purchases using integrated payment gateways.",
-        repoLink: "https://github.com/YashBhut1524/BlnkIt-clone",
+        repoLink: "https://github.com/Yashh1524/BlnkIt-clone",
         liveLink: "https://blnkit-clone.vercel.app/",
         ytLink: "https://www.youtube.com/watch?v=uZkDM8ZYMFY",
         image: "/img/projectImg/blinkitClone.png",
@@ -205,7 +205,7 @@ export const projects = [
         title: "OCR TOOL",
         description: "An OCR tool built with Python and pytesseract that extracts text from images via a custom snipping tool or image upload.",
         fullDescription: "This OCR (Optical Character Recognition) tool, built with Python and pytesseract, allows users to extract text from images efficiently. It offers two methods for text extraction: a custom snipping tool that lets users capture a specific area of the screen and an option to upload an image from their device. With a simple and user-friendly approach, this tool makes text recognition from images quick and convenient.",
-        repoLink: "https://github.com/YashBhut1524/OCR-Tool-App-using-PyTesseract",
+        repoLink: "https://github.com/Yashh1524/OCR-Tool-App-using-PyTesseract",
         liveLink: "",
         ytLink: "https://www.youtube.com/watch?v=uTJTmOiS8ws",
         image: "/img/projectImg/ocr.png",
