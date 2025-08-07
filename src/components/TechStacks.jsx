@@ -43,7 +43,7 @@ const TechStacks = () => {
 
     return (
         <div 
-            className="scroll-container bg-[#181818] text-white flex flex-col items-center h-full w-[83%] pb-10 my-10 lg:-mt-40">
+            className="scroll-container bg-[#181818] text-white flex flex-col items-center h-full w-[83%] pb-10 my-10 lg:-mt-20 xl:-mt-40">
             {/* Tech Stack Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-11 gap-5 mt-0 w-full">
                 {techStack.map((tech, index) => (
