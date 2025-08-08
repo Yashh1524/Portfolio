@@ -164,7 +164,7 @@ export const projects = [
                 img: "/img/tech/tailwindcss.svg"
             },
             {
-                name: "Razorpau",
+                name: "Razorpay",
                 img: "/img/tech/razorpay.png"
             }
         ]
