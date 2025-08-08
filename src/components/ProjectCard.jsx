@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ReactCardFlip from 'react-card-flip';
-import { FaGithub, FaYoutube } from 'react-icons/fa6';
+import React, { useState, useRef, useEffect } from "react";
+import ReactCardFlip from "react-card-flip";
+import { FaGithub, FaYoutube } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 
 const ProjectCard = ({
@@ -16,23 +16,34 @@ const ProjectCard = ({
 }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isFlipped, setIsFlipped] = useState(false);
+    const [cardHeight, setCardHeight] = useState("auto");
+    const cardRef = useRef(null);
+
+    // Keep front and back the same height dynamically
+    useEffect(() => {
+        if (cardRef.current) {
+            setCardHeight(`${cardRef.current.offsetHeight}px`);
+        }
+    }, [isFlipped]);
 
     return (
-        <div className="w-full max-w-5xl mx-auto h-full md:h-[450px]">
+        <div className="w-full max-w-5xl mx-auto">
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-                
                 {/* FRONT SIDE */}
                 <div
-                    className="flex flex-col lg:flex-row bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 w-full"
+                    ref={cardRef}
+                    style={{ minHeight: cardHeight }}
+                    className="flex flex-col lg:flex-row-reverse bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 w-full"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {/* Left Image/Video */}
-                    <div className="relative w-full lg:w-1/2 h-full">
+                    <div className="relative w-full lg:w-1/2 h-64 lg:h-auto">
                         <img
                             src={image}
                             alt={title}
-                            className={`object-cover w-full h-full transition-opacity duration-300 ${isHovered && video ? 'opacity-0' : 'opacity-100'}`}
+                            className={`object-cover w-full h-full transition-opacity duration-300 ${isHovered && video ? "opacity-0" : "opacity-100"
+                                }`}
                         />
                         {video && (
                             <video
@@ -40,16 +51,19 @@ const ProjectCard = ({
                                 autoPlay
                                 loop
                                 muted
-                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"
+                                    }`}
                             />
                         )}
                     </div>
 
                     {/* Right Text */}
-                    <div className="flex flex-col justify-between bg-[#242323] text-white p-6 md:p-10 w-full lg:w-1/2 h-full">
+                    <div className="flex flex-col justify-between bg-[#242323] text-white p-6 md:p-10 w-full lg:w-1/2">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-bold mb-4">{title}</h2>
-                            <p className="text-gray-300 mb-6 text-sm md:text-base">{description}</p>
+                            <p className="text-gray-300 mb-6 text-sm md:text-base">
+                                {description}
+                            </p>
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {techStackUsed.map((tech, index) => (
                                     <span
@@ -60,7 +74,7 @@ const ProjectCard = ({
                                     </span>
                                 ))}
                             </div>
-                            <div className="flex gap-4 mt-4">
+                            <div className="flex gap-4 mt-4 flex-wrap">
                                 {liveLink && (
                                     <a
                                         href={liveLink}
@@ -106,22 +120,32 @@ const ProjectCard = ({
                 </div>
 
                 {/* BACK SIDE */}
-                <div className="flex flex-col bg-[#242323] text-white p-6 md:p-10 rounded-2xl w-full justify-between shadow-xl relative overflow-y-auto">
+                <div
+                    style={{ minHeight: cardHeight }}
+                    className="flex flex-col bg-[#242323] text-white p-6 md:p-10 rounded-2xl w-full justify-between shadow-xl relative overflow-y-auto"
+                >
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">{title} - Details</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                            {title} - Details
+                        </h2>
                         <p className="text-gray-300 mb-6 text-sm md:text-base whitespace-pre-line">
                             {fullDescription}
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-4 mb-6">
                         {techStackUsed.map((tech, index) => (
-                            <div key={index} className="flex items-center gap-2 bg-[#282828] p-3 rounded-2xl select-none">
+                            <div
+                                key={index}
+                                className="flex items-center gap-2 bg-[#282828] p-3 rounded-2xl select-none"
+                            >
                                 <img
                                     src={tech.img}
                                     alt={tech.name}
                                     className="w-10 h-10 object-contain"
                                 />
-                                <span className="text-gray-300 text-sm hidden md:block">{tech.name}</span>
+                                <span className="text-gray-300 text-sm hidden md:block">
+                                    {tech.name}
+                                </span>
                             </div>
                         ))}
                     </div>
