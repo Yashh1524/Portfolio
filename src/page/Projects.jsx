@@ -1,41 +1,61 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
-import { projects } from "../constants";
+import ProjectSkeleton from "../components/ProjectSkeleton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import api from "@/lib/api";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
-    useGSAP(() => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#projects",
-            start: "top 80%",
-            toggleActions: "play none none none",
-        },
-        repeat: -1,
-        yoyo: true,
-        repeatRefresh: true,
-    });
+    const [projectList, setProjectList] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    tl.to("#target-icon", {
-        scale: () => gsap.utils.random(1.2, 1.8),
-        rotation: () => gsap.utils.random(180, 720), 
-        x: () => gsap.utils.random(0, 50),        
-        y: () => gsap.utils.random(-30, 30), 
-        duration: () => gsap.utils.random(1, 2),
-        ease: "elastic.out(1, 0.5)",
-    }).to("#target-icon", {
-        scale: 1,
-        rotation: 0,
-        x: 0,
-        y: 0,
-        duration: () => gsap.utils.random(1, 2),
-        ease: "power1.inOut",
-    });
-}, []);
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const res = await api("admin/project/get-projects");
+                const data = res.data?.projects || [];
+                setProjectList(data);
+            } catch (error) {
+                console.error("Failed to fetch projects:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProjects();
+    }, []);
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+            repeat: -1,
+            yoyo: true,
+            repeatRefresh: true,
+        });
+
+        tl.to("#target-icon", {
+            scale: () => gsap.utils.random(1.2, 1.8),
+            rotation: () => gsap.utils.random(180, 720),
+            x: () => gsap.utils.random(0, 50),
+            y: () => gsap.utils.random(-30, 30),
+            duration: () => gsap.utils.random(1, 2),
+            ease: "elastic.out(1, 0.5)",
+        }).to("#target-icon", {
+            scale: 1,
+            rotation: 0,
+            x: 0,
+            y: 0,
+            duration: () => gsap.utils.random(1, 2),
+            ease: "power1.inOut",
+        });
+    }, []);
 
     return (
         <section id="projects" className="mt-20">
@@ -46,24 +66,28 @@ function Projects() {
                     </span>{" "}
                     <span id="target-icon" className="inline-block">🎯</span>
                 </h1>
+            </div>
 
-            </div>
             <div className="flex flex-col items-center justify-center px-3 gap-6 md:flex-wrap md:justify-center mt-20">
-                {projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        title={project?.title}
-                        description={project?.description}
-                        fullDescription={project?.fullDescription}
-                        repoLink={project?.repoLink}
-                        liveLink={project?.liveLink}
-                        ytLink={project?.ytLink}
-                        image={project?.image}
-                        video={project?.video}
-                        techStackUsed={project?.techStackUsed}
-                    />
-                ))}
+                {loading
+                    ? [...Array(3)].map((_, index) => (
+                        <ProjectSkeleton key={index} />
+                    ))
+                    : projectList.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            title={project?.title}
+                            description={project?.description}
+                            fullDescription={project?.fullDescription}
+                            repoLink={project?.github_link}
+                            liveLink={project?.live_link}
+                            ytLink={project?.yt_link}
+                            image={project?.image.url}
+                            techStackUsed={project?.tools}
+                        />
+                    ))}
             </div>
+
         </section>
     );
 }
