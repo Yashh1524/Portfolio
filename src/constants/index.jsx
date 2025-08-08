@@ -141,7 +141,7 @@ export const projects = [
         repoLink: "https://github.com/Yashh1524/Gambles",
         liveLink: "https://gambles-gilt.vercel.app/",
         ytLink: "https://www.youtube.com/watch?v=KF0jBhC7FsM&feature=youtu.beuZkDM8ZYMFY",
-        image: "/img/projectImg/gambles.jpg",
+        image: "/img/projectImg/gambles.png",
         techStackUsed: [
             {
                 name: "MongoDB",
@@ -162,6 +162,10 @@ export const projects = [
             {
                 name: "TailwindCSS",
                 img: "/img/tech/tailwindcss.svg"
+            },
+            {
+                name: "Razorpau",
+                img: "/img/tech/razorpay.png"
             }
         ]
     },

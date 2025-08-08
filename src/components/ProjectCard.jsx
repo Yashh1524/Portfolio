@@ -33,7 +33,7 @@ const ProjectCard = ({
                 <div
                     ref={cardRef}
                     style={{ minHeight: cardHeight }}
-                    className="flex flex-col lg:flex-row-reverse bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 w-full"
+                    className="flex flex-col lg:flex-row bg-[#0F0F1C] rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 w-full lg:h-[375px]"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
