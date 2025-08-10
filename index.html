@@ -1,14 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="google-site-verification" content="n-WzmejyTy_Fa593oUKLbgvcvEdS0CMu5cWnpKj2Opc" />
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/img/y.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yash Bhut</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.jpg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>%VITE_META_TITLE%</title>
+
+		<meta name="description" content="%VITE_META_DESCRIPTION%" />
+		<meta name="keywords" content="%VITE_META_KEYWORDS%" />
+		<meta name="author" content="%VITE_META_AUTHOR%" />
+		<meta
+			name="google-site-verification"
+			content="%VITE_GOOGLE_VERIFICATION%"
+		/>
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="%VITE_META_TITLE%" />
+		<meta property="og:description" content="%VITE_META_DESCRIPTION%" />
+		<meta property="og:image" content="%VITE_OG_IMAGE%" />
+		<meta property="og:url" content="%VITE_OG_URL%" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="%VITE_TWITTER_HANDLE%" />
+		<meta name="twitter:creator" content="%VITE_TWITTER_HANDLE%" />
+		<meta name="twitter:title" content="%VITE_META_TITLE%" />
+		<meta name="twitter:description" content="%VITE_META_DESCRIPTION%" />
+		<meta name="twitter:image" content="%VITE_OG_IMAGE%" />
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
 </html>
